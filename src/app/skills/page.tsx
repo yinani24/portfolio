@@ -1,7 +1,7 @@
 export default function Skills() {
     return (
       <div>
-        <h1>Home</h1>
+        <h1>Skills</h1>
       </div>
     )
   }
