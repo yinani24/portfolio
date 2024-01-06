@@ -1,9 +1,21 @@
 import NavBar from "@/components/navbar"
+import About from "../about/page"
+import Contact from "../contact/page"
+import Experience from "../experience/page"
+import Project from "../projects/page"
+import Skills from "../skills/page"
+import Home from "../home/page"
 
-export default function Home() {
+export default function main() {
   return (
-    <div>
-      <NavBar/>    
-    </div>
+    <main>
+      <NavBar/>
+      <Home/>
+      <Contact/>
+      <Experience/>
+      <Project/>
+      <Skills/>
+      <About/>   
+    </main>
   )
 }
