@@ -1,7 +1,7 @@
-export default function Experience() {
-    return (
-      <div>
-        <h1>Experience</h1>
-      </div>
-    )
-  }
+export default function Experience(){
+  return (
+    <section id='experience'>
+      <h1>Experience</h1>
+    </section>
+  )
+}

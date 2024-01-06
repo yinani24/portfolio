@@ -11,11 +11,11 @@ export default function main() {
     <main>
       <NavBar/>
       <Home/>
-      <Contact/>
-      <Experience/>
       <Project/>
       <Skills/>
-      <About/>   
+      <Contact/>
+      <About/>  
+      <Experience/>
     </main>
   )
 }
