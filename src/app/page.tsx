@@ -8,8 +8,8 @@ import Home from "../home/page"
 
 export default function main() {
   return (
-    <main>
-      <NavBar/>
+    <main className='bg-[#090E16]'>
+      <NavBar/> 
       <Home/>
       <Project/>
       <Skills/>
