@@ -8,14 +8,16 @@ import Home from "../home/page"
 
 export default function main() {
   return (
-    <main className='bg-[#090E16]'>
+    <main className='bg-[#090E16] flex min-h-screen flex-col'>
       <NavBar/> 
-      <Home/>
-      <Project/>
-      <Skills/>
-      <Contact/>
-      <About/>  
-      <Experience/>
+      <div className="container mt-24 mx-auto px-12 py-4">
+        <Home/>
+        <Project/>
+        <Skills/>
+        <Contact/>
+        <About/>  
+        <Experience/>
+      </div>
     </main>
   )
 }
