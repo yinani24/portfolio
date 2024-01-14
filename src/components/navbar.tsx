@@ -8,19 +8,19 @@ import { motion } from 'framer-motion'
 
 export default function NavBar() {
     return (
-      <div className='flex w-screen justify-center'>
+      <div className='fixed flex w-screen justify-center'>
         <motion.section 
           initial={{ opacity: 0, scale:0.5, y: -100}}
           animate={{ opacity: 1, scale:1, y: 0}}
           className='fixed flex flex-wrap flex-row justify-between
-        items-center w-10/12 p-2 bg-[#7B4AE208] rounded-lg my-5'
+        items-center w-9/12 p-2 bg-[#7B4AE208] rounded-2xl my-5'
         >
           <motion.button 
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className='mx-32'>
+            className=''>
             <Link href='/'>
-              <Image className='rounded-lg' src={Logo} width={60} height={60} 
+              <Image className='rounded-md' src={Logo} width={62.5} height={60} 
                 alt={"Yash Inani Logo"}>
               </Image>
             </Link>

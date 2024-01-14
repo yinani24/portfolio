@@ -6,35 +6,52 @@ import Image from 'next/image'
 import Github from '../../public/Github.png'
 import LinkedIn from '../../public/LinkedIn.png' 
 import Link from "next/link";
+import ARImage from '../../public/ar-image.jpg'
 
 export default function Home() {
     return (
-      <section id='home'>
+      <section id='home' className="">
         <div>
           <div className='rounded-lg bg-[#7B4AE208]'>
-            <p className='text-white font-[Raleway] font-bold text-lg text-center'>👋 Hello!!</p>
+            <h1 className='text-white font-[raleway] font-bold'>👋 Hello!!</h1>
           </div>
-          <h1 className='text-white font-[Raleway] font-bold text-9xl text-center'>
-            <span className='text-[#7B4AE2]'>I'm
+          <h1 className='text-white mb-4 font-[raleway] text-9xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold'>
+            <span>{" "}</span>
             <TypeAnimation
-            sequence={names.flatMap(({name, time}) => [name, time])}
-            wrapper="h1"
+            sequence={[
+              "Yash Inani",
+              1000,
+              "Web Developer",
+              1000,
+            ]}
+            wrapper="span"
             speed={50}
             repeat={Infinity}
             />
-            </span>
-            
           </h1>
-          
-          <div>
-          <Link href='https://www.github.com/yinani24/'>
-            <Image alt='Github' className='rounded-lg' src={Github} width={60} height={60}/>
-          </Link>
-          <Link href='https://www.linkedin.com/in/yash-inani/'>
-            <Image alt='LinkedIn' className='rounded-lg' src={LinkedIn} width={60} height={60}/>
-          </Link>
+          <div className='flex flex-row justify-around'>
+            <Link href='https://www.github.com/yinani24/'>
+              <Image alt='Github' className='rounded-lg' src={Github} width={10} height={10}/>
+            </Link>
+            <Link href='https://www.linkedin.com/in/yash-inani/'>
+              <Image alt='LinkedIn' className='rounded-lg' src={LinkedIn} width={10} height={10}/>
+            </Link>
           </div>
-          
+        </div>
+        
+        <div className='rounded-3xl'>
+          <Image alt='Yash Inani' src={ARImage} width={300} height={300}/>
+        </div>
+
+        <div className='flex flex-col'>
+            <button className='bg-[#7B4AE208] rounded-lg font-raleway'>
+              <Link href='/#contact'>
+                <h1 className='text-white font-[Raleway] font-bold'>Contact Me</h1>
+              </Link>
+            </button>
+            <button className='bg-[#7B4AE208] rounded-lg download'>
+              Download
+            </button>
         </div>
       </section>
     )
