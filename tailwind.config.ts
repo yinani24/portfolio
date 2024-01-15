@@ -16,9 +16,6 @@ const config: Config = {
       fontFamily: {
         Raleway: ['Raleway', 'sans-serif'],
       },
-      // colors:{
-      //   'navbar': '#090E16',
-      // },
     },
   },
   plugins: [],

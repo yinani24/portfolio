@@ -3,27 +3,29 @@
 import Link from 'next/link'
 import { navname } from './constants'
 import Image from 'next/image'
-import Logo from '../../public/Logo.png'
+import Logo from '../../public/logo.png'
 import { motion } from 'framer-motion'
 
 export default function NavBar() {
     return (
-      <div className='fixed flex w-screen justify-center'>
+      <nav className='fixed flex w-screen justify-center'>
         <motion.section 
           initial={{ opacity: 0, scale:0.5, y: -100}}
           animate={{ opacity: 1, scale:1, y: 0}}
-          className='fixed flex flex-wrap flex-row justify-between
+          className='flex flex-wrap flex-row justify-between
         items-center w-9/12 p-2 bg-[#7B4AE208] rounded-2xl my-5'
         >
           <motion.button 
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className=''>
+            className='mx-3'>
+            
             <Link href='/'>
               <Image className='rounded-md' src={Logo} width={62.5} height={60} 
-                alt={"Yash Inani Logo"}>
+                alt={"Logo"}>
               </Image>
             </Link>
+            
           </motion.button>
           <ul className='flex flex-row justify-around items-center w-[30rem]'>
             {navname.map((name, index) => (
@@ -41,6 +43,6 @@ export default function NavBar() {
             ))}
           </ul>
         </motion.section>
-      </div>
+      </nav>
     )
   }
