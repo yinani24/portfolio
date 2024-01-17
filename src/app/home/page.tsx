@@ -53,14 +53,14 @@ export default function Home() {
           </motion.div>
 
           <div className='flex flex-col justify-around h-20 '>
-              <motion.button className='border w-32 flex flex-row justify-around items-center border-[#7B4AE280] rounded-2xl text-[#7B4AE280]'>
-                <GrContact className=''/>
+              <motion.button className='border w-32 flex flex-row justify-center items-center border-[#7B4AE280] rounded-2xl text-[#7B4AE280]'>
+                <GrContact className='m-0.5 p-0.5'/>
                 <Link href='/#contact'>
                   <span className='text-[#7B4AE280] font-raleway font-bold'>Contact Me</span>
                 </Link>
               </motion.button>
-              <motion.button className='border-[#7B4AE280] rounded-2xl text-[#7B4AE280] font-raleway download'>
-                <FaDownload />Resume
+              <motion.button className='border-[#7B4AE280] rounded-2xl flex flex-row justify-center items-center text-[#7B4AE280] font-raleway download'>
+                Resume <FaDownload className='m-0.5 p-0.5' />
               </motion.button>
           </div>
       </section>
