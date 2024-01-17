@@ -8,6 +8,8 @@ import LinkedIn from '../../../public/LinkedIn.png'
 import Link from "next/link";
 import AR from '../../../public/ar-image.png'
 import { motion } from "framer-motion";
+import { FaDownload } from "react-icons/fa";
+import { GrContact } from "react-icons/gr";
 
 export default function Home() {
     return (
@@ -45,18 +47,20 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, scale:0.5, y: 100}}
             animate={{ opacity: 1, scale:1, y: 0}}
+            transition={{ duration: 0.5 }}
           >
             <Image className="rounded-full" alt={'Face'} src={AR} width={450} quality={100} height={450}/>
           </motion.div>
 
           <div className='flex flex-col justify-around h-20 '>
-              <motion.button className='border w-32 border-[#7B4AE280] rounded-2xl'>
+              <motion.button className='border w-32 flex flex-row justify-around items-center border-[#7B4AE280] rounded-2xl text-[#7B4AE280]'>
+                <GrContact className=''/>
                 <Link href='/#contact'>
                   <span className='text-[#7B4AE280] font-raleway font-bold'>Contact Me</span>
                 </Link>
               </motion.button>
               <motion.button className='border-[#7B4AE280] rounded-2xl text-[#7B4AE280] font-raleway download'>
-                Resume
+                <FaDownload />Resume
               </motion.button>
           </div>
       </section>
