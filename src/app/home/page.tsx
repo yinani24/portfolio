@@ -13,7 +13,7 @@ import { GrContact } from "react-icons/gr";
 
 export default function Home() {
     return (
-      <section id='home' className='flex flex-row justify-around items-center'>
+      <section id='home' className='flex flex-row justify-around items-center w-100 h-100'>
           <div className="flex flex-col w-56">
             <div className=''>
               <div className='rounded-2xl w-24 py-1 px-2 bg-[#7B4AE208]'>
