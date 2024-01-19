@@ -10,16 +10,20 @@ import AR from '../../../public/ar-image.png'
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 import { GrContact } from "react-icons/gr";
+import ImageFn from "./image";
 
 export default function Home() {
     return (
-      <section id='home' className='flex flex-row justify-around items-center w-100 h-100'>
+      <motion.section id='home' 
+        initial={{ opacity: 0, scale:0.5, y: 100}}
+        animate={{ opacity: 1, scale:1, y: 0}}
+        transition={{ duration: 0.5 }}
+        className='flex flex-row justify-around items-center h-screen'>
           <div className="flex flex-col w-56">
-            <div className=''>
               <div className='rounded-2xl w-24 py-1 px-2 bg-[#7B4AE208]'>
-                <h1 className='text-[#7B4AE2] font-raleway font-bold text-center'>👋 Hello!!</h1>
+                <h1 className='text-[#7B4AE2] font-raleway font-bold text-center text-md'>👋 Hello!!</h1>
               </div>
-              <h1 className='text-white mb-4 font-[raleway] text-5xl font-extrabold'>
+              <h1 className='text-white mb-4 font-[raleway] text-6xl font-extrabold'>
                 <span>{" "}</span>
                 <TypeAnimation
                 sequence={[
@@ -33,7 +37,6 @@ export default function Home() {
                 repeat={Infinity}
                 />
               </h1>
-            </div>
             <div className='flex flex-row justify-around w-16'>
               <Link href='https://www.github.com/yinani24/'>
                 <Image alt='Github' src={Github} width={25} height={25}/>
@@ -44,25 +47,30 @@ export default function Home() {
             </div>
           </div>
           
-          <motion.div
-            initial={{ opacity: 0, scale:0.5, y: 100}}
-            animate={{ opacity: 1, scale:1, y: 0}}
-            transition={{ duration: 0.5 }}
-          >
-            <Image className="rounded-full" alt={'Face'} src={AR} width={450} quality={100} height={450}/>
-          </motion.div>
+          <ImageFn/>
 
-          <div className='flex flex-col justify-around h-20 '>
-              <motion.button className='border w-32 flex flex-row justify-center items-center border-[#7B4AE280] rounded-2xl text-[#7B4AE280]'>
+          <motion.div 
+            
+            className='flex flex-col justify-around h-20 '>  
+              
+              <motion.button 
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className='border w-32 flex hover:text-white flex-row justify-center items-center border-[#7B4AE280] rounded-2xl text-[#7B4AE280]'>
                 <GrContact className='m-0.5 p-0.5'/>
                 <Link href='/#contact'>
-                  <span className='text-[#7B4AE280] font-raleway font-bold'>Contact Me</span>
+                  <div className='text-[#7B4AE280] font-raleway font-semibold hover:text-white'>Contact Me</div>
                 </Link>
               </motion.button>
-              <motion.button className='border-[#7B4AE280] rounded-2xl flex flex-row justify-center items-center text-[#7B4AE280] font-raleway download'>
+              <motion.button 
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className='border-[#7B4AE280] rounded-2xl flex 
+              flex-row justify-center items-center text-[#7B4AE280] font-semibold 
+              font-raleway download hover:text-white'>
                 Resume <FaDownload className='m-0.5 p-0.5' />
               </motion.button>
-          </div>
-      </section>
+          </motion.div>
+      </motion.section>
     )
   }

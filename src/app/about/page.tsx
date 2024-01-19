@@ -1,6 +1,6 @@
 export default function About() {
     return (
-      <section id='about' className='flex flex-row'>
+      <section id='about' className='flex flex-row h-screen'>
         <div className='flex flex-col w-1/2'>
           <h1 className='text-white font-raleway text-5xl font-bold'>About Me</h1>
           <p className='text-white font-raleway text-lg mt-4'>I am a second year Computer Science student at the University of Waterloo. I am passionate about full stack development and have experience working with React, Next.js, Node.js, Express.js, MongoDB, and PostgreSQL. I am a quick learner and am always looking to learn new technologies.</p>

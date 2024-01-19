@@ -10,7 +10,7 @@ export default function main() {
   return (
     <main className='flex min-h-screen flex-col bg-[#090E16]'>
       <NavBar/> 
-      <div className="container mt-24 mx-auto px-12 py-4">
+      <div className="container mt-5 mx-auto px-5 py-4">
         <Home/>
         <About/>
         <Project/>
