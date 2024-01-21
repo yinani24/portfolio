@@ -6,7 +6,6 @@ import Image from 'next/image'
 import Github from '../../../public/Github.png'
 import LinkedIn from '../../../public/LinkedIn.png' 
 import Link from "next/link";
-import AR from '../../../public/ar-image.png'
 import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 import { GrContact } from "react-icons/gr";
