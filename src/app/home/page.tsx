@@ -1,7 +1,7 @@
 "use client";
 import React from "react"
 import { TypeAnimation } from "react-type-animation"
-import {names} from '../../components/constants'
+// import {names} from '../../components/constants'
 import Image from 'next/image'
 import Github from '../../../public/Github.png'
 import LinkedIn from '../../../public/LinkedIn.png' 
@@ -12,6 +12,7 @@ import { GrContact } from "react-icons/gr";
 import ImageFn from "./image";
 
 export default function Home() {
+  
     return (
       <motion.section id='home' 
         initial={{ opacity: 0, scale:0.5, y: 100}}
@@ -19,8 +20,8 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className='flex flex-row justify-around items-center h-screen'>
           <div className="flex flex-col w-56">
-              <div className='rounded-2xl w-24 py-1 px-2 bg-[#7B4AE208]'>
-                <h1 className='text-[#7B4AE2] font-raleway font-bold text-center text-md'>👋 Hello!!</h1>
+              <div className='rounded-2xl w-32 py-1 px-2 bg-[#7B4AE208]'>
+                <h1 className='text-[#7B4AE2] font-raleway font-bold text-center text-md'>👋 Hello, I'm</h1>
               </div>
               <h1 className='text-white mb-4 font-[raleway] text-6xl font-extrabold'>
                 <span>{" "}</span>
@@ -28,7 +29,7 @@ export default function Home() {
                 sequence={[
                   "Yash Inani",
                   4000,
-                  "Web Developer",
+                  "Full Stack Developer",
                   4000,
                 ]}
                 wrapper="span"

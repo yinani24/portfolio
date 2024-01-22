@@ -7,7 +7,7 @@ export const navname = [
     {'route': '#experience', 'title': 'Experience'}
 ]
 
-export const names = [
-    {'name': "Yash Inani", "time": 1000},
-    {'name': "a Developer", "time": 1000},
-]
+// export const names = [
+//     {'name': "Yash Inani", "time": 1000},
+//     {'name': "a Developer", "time": 1000},
+// ]
