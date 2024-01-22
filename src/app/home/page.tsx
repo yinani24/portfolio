@@ -50,9 +50,7 @@ export default function Home() {
           <ImageFn/>
 
           <motion.div 
-            
             className='flex flex-col justify-around h-20 '>  
-              
               <motion.button 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

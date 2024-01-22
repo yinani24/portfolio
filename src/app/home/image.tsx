@@ -9,10 +9,10 @@ export default function ImageFn(){
         target: ref,
         offset: ["start end", "end end"]
     })
-    const rotate = useTransform(scrollY, [0, 250], [0, 50], {clamp: false})
+    const rotate = useTransform(scrollY, [0, 300], [0, 30], {clamp: false})
     return(
-        <motion.div ref={ref} style={{rotate}}>
-            <Image className="-z-1 rounded-full" alt={'Face'} src={AR} width={450} quality={100} height={450}/>
+        <motion.div className='z-0' ref={ref} style={{rotate}} >
+            <Image className="z-9998 rounded-full" alt={'Face'} src={AR} width={450} quality={100} height={450}/>
         </motion.div>
     )
 }

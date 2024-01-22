@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 
 export default function NavBar() {
     return (
-      <nav className='fixed z-1 flex w-screen justify-center'>
+      <nav className='fixed z-10 flex w-screen justify-center'>
         <motion.section 
           initial={{ opacity: 0, scale:0.5, y: -100}}
           animate={{ opacity: 1, scale:1, y: 0}}

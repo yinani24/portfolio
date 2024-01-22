@@ -13,10 +13,10 @@ export default function main() {
       <div className="container mt-5 mx-auto px-5 py-4">
         <Home/>
         <About/>
-        <Project/>
-        <Skills/>
-        <Contact/>
         <Experience/>
+        <Skills/>
+        <Project/>
+        <Contact/>
       </div>
     </main>
   )

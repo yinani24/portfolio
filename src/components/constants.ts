@@ -1,10 +1,10 @@
 export const navname = [
     {'route':"/", 'title': 'Home'},
     {'route':'#about', 'title': 'About'},
-    {'route':'#projects', 'title': 'Projects'},
+    {'route': '#experience', 'title': 'Experience'},
     {'route':'#skills', 'title': 'Skills'},
+    {'route':'#projects', 'title': 'Projects'},
     {'route':'#contact', 'title': 'Contact'},
-    {'route': '#experience', 'title': 'Experience'}
 ]
 
 // export const names = [
