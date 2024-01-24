@@ -56,9 +56,9 @@ export default function Home() {
                 whileTap={{ scale: 0.9 }}
                 className='border w-32 flex hover:text-white flex-row justify-center items-center border-[#7B4AE280] rounded-2xl text-[#7B4AE280]'>
                 <GrContact className='m-0.5 p-0.5'/>
-                <Link href='/#contact'>
-                  <div className='text-[#7B4AE280] font-raleway font-semibold hover:text-white'>Contact Me</div>
-                </Link>
+                <div className='text-[#7B4AE280] font-raleway font-semibold'>
+                  <Link href='/#contact' className="hover:text-white">Contact Me</Link>
+                </div>
               </motion.button>
               <motion.button 
                 whileHover={{ scale: 1.1 }}

@@ -6,7 +6,8 @@ import { Description } from './description';
 
 export default function About() {
     return (
-      <motion.section id='about' className='flex flex-row justify-around items-center h-screen'>
+      <motion.section 
+        id='about' className='flex flex-row justify-around items-center h-screen'>
         <div>
           <Image src={ARImage} alt="profile" width={200} height={200}/>
         </div>
