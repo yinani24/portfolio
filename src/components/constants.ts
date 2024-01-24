@@ -2,7 +2,7 @@ export const navname = [
     {'route':"/", 'title': 'Home'},
     {'route':'#about', 'title': 'About'},
     {'route': '#experience', 'title': 'Experience'},
-    {'route':'#skills', 'title': 'Skills'},
+    // {'route':'#skills', 'title': 'Skills'},
     {'route':'#projects', 'title': 'Projects'},
     {'route':'#contact', 'title': 'Contact'},
 ]

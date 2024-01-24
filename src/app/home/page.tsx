@@ -17,7 +17,7 @@ export default function Home() {
   
     return (
       <motion.section id='home' 
-        initial={{ opacity: 0, scale:0.5, y: 100}}
+        initial={{ opacity: 0, scale:0.5, y: -100}}
         animate={{ opacity: 1, scale:1, y: 0}}
         transition={{ duration: 0.5 }}
         className='flex flex-row justify-around items-center h-screen'>
@@ -66,8 +66,8 @@ export default function Home() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className='border-[#7B4AE280] rounded-2xl flex 
-              flex-row justify-center items-center text-[#7B4AE280] font-semibold 
-              font-raleway download hover:text-white'>
+                flex-row justify-center items-center text-[#7B4AE280] font-semibold 
+                font-raleway download hover:text-white'>
                 <Link href='../../Yash_Inani_Resume_2024.pdf'>Resume</Link> 
                 <FaDownload className='m-0.5 p-0.5' />
               </motion.button>

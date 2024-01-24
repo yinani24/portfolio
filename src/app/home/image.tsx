@@ -9,7 +9,7 @@ export default function ImageFn(){
         target: ref,
         offset: ["start end", "end end"]
     })
-    const rotate = useTransform(scrollY, [0, 200], [0, 20], {clamp: false})
+    const rotate = useTransform(scrollY, [0, 200, 300], [0, 0, 20], {clamp: false})
     const opacity = useTransform(scrollY, [-100, 0, 200, 250, 300, 350],
         [0, 1, 1, 0.55, 0.25, 0], {clamp: false})
     return(
