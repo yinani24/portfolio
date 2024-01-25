@@ -8,7 +8,7 @@ import { projects } from "@/components/constants";
 export default function Project() {
     return (
       <section id='projects' 
-      className='flex flex-col'>
+      className='flex flex-col scroll-mt-28 mt-28'>
         <div className='flex flew-row w-full'>
           <div className=''>
             <TopBar width={"w-32"}>🔗 Portfolio</TopBar>

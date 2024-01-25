@@ -1,5 +1,7 @@
 import { ProjectsProps } from "./interfaces"
 import ARImage from '../../public/ar-image.png'
+import { GrContact } from "react-icons/gr";
+import React from "react";
 
 export const navname = [
     {'route':"/", 'title': 'Home'},
@@ -28,4 +30,10 @@ export const projects: ProjectsProps[] = [
     'tags': ['React', 'Node'], 'image': ARImage},
     {'title': "Project 6", "description": "Description 6", "link": "Link 6",
     'tags': ['React', 'Node'], 'image': ARImage},
-]
+] as const;
+
+export const experiences = [
+    {'title': "Experience 1", "description": "Description 1", "Icon": React.createElement(GrContact), "date": "2020-2021"},
+    {'title': "Experience 2", "description": "Description 2", "Icon": React.createElement(GrContact), "date": "2020-2021"},
+    {'title': "Experience 3", "description": "Description 3", "Icon": React.createElement(GrContact), "date": "2020-2021"}
+] as const;

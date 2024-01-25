@@ -14,7 +14,7 @@ export default function main() {
         <Home/>
         <About/>
         <Experience/>
-        <Skills/>
+        {/* <Skills/> */}
         <Project/>
         <Contact/>
       </div>
