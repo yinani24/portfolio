@@ -3,7 +3,7 @@ import { ParallaxText } from "./velocity"
 
 export default function Skills() {
   return (
-    <section id='skills'>
+    <section id='skills' className="w-full h-full">
       {/* <TopBar>🧑‍💻 Skills</TopBar>
       <h1 className='text-white mb-4 font-[raleway] text-6xl font-extrabold'> Technologies and Skills </h1> */}
       <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>

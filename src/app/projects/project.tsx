@@ -9,7 +9,7 @@ export default function ProjectCard({Proj} : {Proj: ProjectsProps}) {
     return(
         <div className='border rounded-2xl border-[#7B4AE280] p-5 hover:bg-[#7B4AE21A]'>
             <h2 className='text-white font-raleway text-2xl font-bold'>{Proj.title}</h2>
-            <p className='text-[#FFFFFF80] font-raleway text-sm font-normal'>{Proj.description}</p>
+            <p className='text-[#FFFFFF80] font-raleway text-sm font-normal mb-5'>{Proj.description}</p>
             <div className='flex flex-row'>
                 {Proj.tags.map((tag, index) => (
                     // <div className='my-3 mr-2'>
@@ -22,7 +22,10 @@ export default function ProjectCard({Proj} : {Proj: ProjectsProps}) {
                     </div>
                 ))}
             </div>
-            <Image src={ARImage} alt="hello" width={300} height={100} className='rounded-lg'></Image>
+            <div className='w-full flex justify-center items-center'>
+            <Image src={ARImage} alt="hello" width={300} height={50} className='rounded-lg'></Image>
+            </div>
+            
         </div>
     )
 }

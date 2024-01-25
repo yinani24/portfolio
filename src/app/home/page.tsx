@@ -25,7 +25,7 @@ export default function Home() {
               {/* <div className='rounded-2xl w-32 py-1 px-2 bg-[#7B4AE208]'>
                 <h1 className='text-[#7B4AE2] font-raleway font-bold text-center text-md'>👋 Hello, I'm</h1>
               </div> */}
-              <TopBar>👋 Hello, I'm</TopBar>
+              <TopBar width={"w-32"}>👋 Hello, I'm</TopBar>
               <h1 className='text-white mb-4 font-[raleway] text-6xl font-extrabold'>
                 <span>{" "}</span>
                 <TypeAnimation

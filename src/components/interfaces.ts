@@ -5,6 +5,7 @@ export interface ParallaxProps {
 
 export interface TopBarProps{
     children: string;
+    width: string;
 }
 
 export interface MotionButton{
