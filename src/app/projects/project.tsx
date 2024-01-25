@@ -3,6 +3,7 @@
 import { ProjectsProps } from "@/components/interfaces";
 import Rectangle from "../../../public/Rectangle3.svg";
 import Image from "next/image";
+import ARImage from "../../../public/ar-image.png";
 
 export default function ProjectCard({Proj} : {Proj: ProjectsProps}) {
     return(
@@ -21,7 +22,7 @@ export default function ProjectCard({Proj} : {Proj: ProjectsProps}) {
                     </div>
                 ))}
             </div>
-            
+            <Image src={ARImage} alt="hello" width={300} height={100} className='rounded-lg'></Image>
         </div>
     )
 }

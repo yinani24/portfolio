@@ -8,7 +8,7 @@ import { projects } from "@/components/constants";
 export default function Project() {
     return (
       <section id='projects' 
-      className='flex flex-col h-screen'>
+      className='flex flex-col'>
         <div className='flex flew-row w-full'>
           <div className=''>
             <TopBar>🔗 Portfolio</TopBar>
@@ -21,7 +21,7 @@ export default function Project() {
             <ButtonLink Icon={GrContact} href='/#contact'>Contact Me</ButtonLink>
           </div> */}
         </div>
-        <ul className='grid grid-cols-3'>
+        <ul className='grid grid-cols-3 gap-4'>
           {projects.map((project, id) => (
               <ProjectCard Proj={project} key={id}></ProjectCard>
             ))}  
