@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import ARImage from '../../../public/ar-image.png'
