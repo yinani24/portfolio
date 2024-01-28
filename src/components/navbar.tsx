@@ -5,15 +5,16 @@ import { navname } from './constants'
 import Image from 'next/image'
 import Logo from '../../public/logo.png'
 import { motion } from 'framer-motion'
+import Fashion from '../../public/fashion.jpg'
 
 export default function NavBar() {
     return (
       <nav className='fixed z-10 flex w-screen justify-center'>
-        <motion.section 
+        <motion.div 
           initial={{ opacity: 0, scale:0.5, y: -100}}
           animate={{ opacity: 1, scale:1, y: 0}}
           className='flex flex-wrap flex-row justify-between
-        items-center w-9/12 p-2 bg-[#7B4AE208] rounded-2xl my-5'
+        items-center w-9/12 p-2 bg-[#131325] rounded-2xl my-5'
         >
           <motion.button 
             whileHover={{ scale: 1.1 }}
@@ -21,7 +22,7 @@ export default function NavBar() {
             className='mx-3'>
             
             <Link href='/'>
-              <Image className='rounded-md' src={Logo} width={62.5} height={60} 
+              <Image className='rounded-md' src={Fashion} width={62.5} height={60} 
                 alt={"Logo"}>
               </Image>
             </Link>
@@ -42,7 +43,7 @@ export default function NavBar() {
               </li>
             ))}
           </ul>
-        </motion.section>
+        </motion.div>
       </nav>
     )
   }
