@@ -8,6 +8,11 @@ export interface TopBarProps{
     width: string;
 }
 
+export interface TopProps{
+    topbar: TopBarProps;
+    children: string;
+}
+
 export interface MotionButton{
     children: string;
     Icon: any;
