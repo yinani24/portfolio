@@ -26,3 +26,9 @@ export interface ProjectsProps{
     image: any;
     link: string;
 }
+
+export interface EmailTemplateProps {
+    email: string;
+    subject: string;
+    body: string;
+}
