@@ -8,30 +8,38 @@ import "react-vertical-timeline-component/style.min.css";
 
 export default function Experience(){
   return (
-    <section id='experience' className='scroll-mt-28'>
+    <section id='experience' className='scroll-mt-24'>
       <div className=''>
         <TopBar width={"w-36"}>💼 Experience</TopBar>
         <h1 className='text-white mb-4 
         font-[raleway] text-6xl font-extrabold'> Experiences </h1>
       </div>
-      <VerticalTimeline lineColor='rgba(123, 74, 226, 0.50)'>
+      <VerticalTimeline lineColor='rgba(123, 74, 226, 0.5)'>
         {experiences.map((item, id) => (
           <React.Fragment key={id}>
             <VerticalTimelineElement 
-              contentStyle={{borderRadius: "16px",
+              contentStyle={{
+                borderRadius: "16px",
                 border: "1px solid rgba(123, 74, 226, 0.50)",
                 background: "#090E16",
-                boxShadow: "none"
+                boxShadow: "none",
+                color: "rgba(255, 255, 255, 0.50)",
+                textAlign: "left",
               }}
+              contentArrowStyle={{ borderRight: '7px solid  rgba(123, 74, 226, 0.50)' }}
+              date={item.date}
+              iconStyle={{ background: '#fff', color: '#7B4AE2', boxShadow: '0 0 0 3px rgba(123, 74, 226, 0.50)'}}
               visible={true} icon={item.Icon}>
-              <h2>{item.title}</h2>
-              <p>{item.description}</p>
-              <p>{item.date}</p>
+              <h2 className='!text-white !font-raleway !text-2xl !font-bold'>{item.title}</h2>
+              <p className='vertical-timeline-element-subtitle !m-0.5 !text-[rgba(255, 255, 255, 0.5)] !font-raleway !text-base !font-normal' >{item.description}</p>
+              <div className='flex justify-between mt-3'>
+                <p className='text-[#7B4AE2] font-raleway text-left text-18 font-bold'>{item.timeline}</p>
+                <p className='text-[#7B4AE2] text-right font-raleway text-base font-normal'>{item.date}</p>
+              </div>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
       </VerticalTimeline>
-
     </section>
   )
 }

@@ -33,7 +33,7 @@ export const projects: ProjectsProps[] = [
 ] as const;
 
 export const experiences = [
-    {'title': "Experience 1", "description": "Description 1", "Icon": React.createElement(GrContact), "date": "2020-2021"},
-    {'title': "Experience 2", "description": "Description 2", "Icon": React.createElement(GrContact), "date": "2020-2021"},
-    {'title': "Experience 3", "description": "Description 3", "Icon": React.createElement(GrContact), "date": "2020-2021"}
+    {'title': "Experience 1", "description": "Description 1", "timeline": "3 months", "Icon": React.createElement(GrContact), "date": "2020-2021"},
+    {'title': "Experience 2", "description": "Description 2", "timeline": "3 months", "Icon": React.createElement(GrContact), "date": "2020-2021"},
+    {'title': "Experience 3", "description": "Description 3", "timeline": "3 months", "Icon": React.createElement(GrContact), "date": "2020-2021"}
 ] as const;
