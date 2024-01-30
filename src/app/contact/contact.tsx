@@ -1,6 +1,5 @@
 import { FiSend } from "react-icons/fi";
 
-
 export default function ContactForm(){
     return(
         <div className='flex flex-col items-center justify-center mt-10'>
@@ -13,10 +12,9 @@ export default function ContactForm(){
                 <textarea className='w-96 h-36 rounded-xl p-4 mb-4 text-[rgba(255, 255, 255, 0.5)] font-Raleway' 
                     placeholder={`Hey Yash,\nI love your website...`}/>
                 <div className="flex w-96 h-12 items-center justify-center text-white">
-                    <button className='absolute w-96 h-12 rounded-xl mb-4 bg-[#7B4AE2] text-white text-Raleway font-bold text-center'>Send</button>
+                    <button className='w-96 h-12 rounded-xl mb-4 bg-[#7B4AE2] text-white text-Raleway font-bold text-center'>Send</button>
                     <FiSend className='w-full relative ml-8'/>
                 </div>
-                
             </form>
         </div>
     )
