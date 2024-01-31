@@ -16,29 +16,25 @@ export default function ContactForm(){
         const JSONdata = JSON.stringify(data);
         const endpoint = "/api/send";
     
-        // Form the request for sending data to the server.
         const options = {
-          // The method is POST because we are sending data.
           method: "POST",
-          // Tell the server we're sending JSON.
           headers: {
             "Content-Type": "application/json",
           },
-          // Body of the request is the JSON data we created above.
           body: JSONdata,
         };
     
         const response = await fetch(endpoint, options);
         console.log(response);
-        
+
         if (response.status === 200) {
             console.log("Message sent.");
             toast.success("Message sent successfully!");
-            e.target.reset()
         }else {
             console.log("Message failed to send.");
             toast.error("Message failed to send.");
         }
+        e.target.reset()
     };
 
     return(
