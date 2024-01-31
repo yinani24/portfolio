@@ -1,6 +1,6 @@
 "use server";
 
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiResponse } from 'next';
 import { EmailTemplate } from '@/components/emailtemplate';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
@@ -9,10 +9,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL || '';
 const toEmail = process.env.TO_EMAIL || '';
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
-    console.log(req.body.json())
-    const { email, subject, message } = req.body.json();
-    
+export async function POST(req: any, res: NextApiResponse) {
+    const { email, subject, message } = await req.json();
+
     try {
         const data = await resend.emails.send({
             from: fromEmail,
