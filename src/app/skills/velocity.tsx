@@ -32,7 +32,7 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
   const directionFactor = useRef<number>(1);
-  useAnimationFrame((t, delta) => {
+    useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
     /**
@@ -59,11 +59,12 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    */
   return (
     <div className="parallax">
-      <motion.div className="scroller" style={{ x }}>
+      <motion.div className="scroller flex flex-row" style={{ x }}>
+        {/* <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
+        <span>{children} </span> */}
+        <span> {children} </span>
       </motion.div>
     </div>
   );

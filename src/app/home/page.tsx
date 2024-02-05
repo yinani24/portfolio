@@ -41,10 +41,10 @@ export default function Home() {
                 />
               </h1>
             <div className='flex flex-row justify-around w-16'>
-              <Link href='https://www.github.com/yinani24/'>
+              <Link target="_blank" href='https://www.github.com/yinani24/'>
                 <Image alt='Github' src={Github} width={25} height={25}/>
               </Link>
-              <Link href='https://www.linkedin.com/in/yash-inani/'>
+              <Link target="_blank" href='https://www.linkedin.com/in/yash-inani/'>
                 <Image alt='LinkedIn' src={LinkedIn} width={25} height={25}/>
               </Link>
             </div>

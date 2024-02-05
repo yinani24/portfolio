@@ -1,5 +1,5 @@
 export interface ParallaxProps {
-    children: string;
+    children: any;
     baseVelocity: number;
 }
 

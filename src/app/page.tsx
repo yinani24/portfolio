@@ -5,6 +5,7 @@ import Experience from "./experience/page"
 import Project from "./projects/page"
 import Skills from "./skills/page"
 import Home from "./home/page"
+import { Footer } from "./footer/footer"
 
 export default function main() {
   return (
@@ -14,10 +15,11 @@ export default function main() {
         <Home/>
         <About/>
         <Experience/>
-        {/* <Skills/> */}
+        <Skills/>
         <Project/>
         <Contact/>
       </div>
+      <Footer/>
     </main>
   )
 }
