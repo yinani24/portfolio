@@ -18,7 +18,7 @@ export function Footer(){
               <Link target="_blank" href='mailto:yinani@ucdavis.edu'>
                 <SiGmail className='text-[#FFFFFF80] text-lg'/>
               </Link>
-              <Link target='_blank' href='www.instagram.com/yash.inani.24'>
+              <Link target='_blank' href='https://www.instagram.com/yash.inani.24'>
                 <FaInstagram className='text-[#FFFFFF80] text-lg'/>
               </Link>
             </div>
