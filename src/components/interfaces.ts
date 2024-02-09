@@ -1,6 +1,8 @@
 export interface ParallaxProps {
     children: any;
     baseVelocity: number;
+    rightShift?: number;
+    leftShift?: number;
 }
 
 export interface TopBarProps{

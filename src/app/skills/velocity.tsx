@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
   motion,
   useScroll,
@@ -14,7 +14,7 @@ import { ParallaxProps } from "../../components/interfaces";
 
 export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
@@ -29,10 +29,13 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * have to replace for wrapping that works for you or dynamically
    * calculate
    */
-  const x = useTransform(baseX, (v) => `${wrap(-70,-20, v)}%`);
+  const width = useRef(0);
+
+// Get viewport width on mount
+  const x = useTransform(baseX, (v) => `${wrap(-20,-70, v)}%`);
 
   const directionFactor = useRef<number>(1);
-    useAnimationFrame((t, delta) => {
+  useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
     /**
@@ -58,16 +61,12 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * dynamically generated number of children.
    */
   return (
-    <div className="parallax">
-      <motion.div className="flex flex-row gap-2" style={{ x }}>
-        {/* <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span> */}
-        <span className='text-white'> {children} </span>
-        <span className='text-white'> {children} </span>
-        <span className='text-white'> {children} </span>
+    <div className='flex flex-nowrap whitespace-nowrap overflow-hidden'>
+      <motion.div className="flex flex-nowrap whitespace-nowrap" style={{ x }}>
+        <span className='mr-10'> {children} </span>
+        <span className='mr-10'> {children} </span>
       </motion.div>
     </div>
+    
   );
 }
