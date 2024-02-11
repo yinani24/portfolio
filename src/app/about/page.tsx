@@ -7,9 +7,11 @@ import { Description } from './description';
 import { TopBar } from '@/components/topbar';
 
 export default function About() {
-    return (
+    
+  return (
       <motion.section 
-        id='about' className='flex flex-row justify-around items-center min-h-screen'>
+        id='about' className='flex flex-row justify-around items-center min-h-screen'
+        >
         <div>
           <Image src={ARImage} alt="profile" width={400} height={200}/>
         </div>

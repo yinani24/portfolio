@@ -23,7 +23,7 @@ import Postgres from '../../../public/icons/postgres.svg'
 
 export function First(){
     return(
-        <div className='flex flex-row gap-10'>
+        <div className='flex flex-row gap-5 bg-[#090E16]'>
             <Image className='opacity-50' src={CSS} alt="CSS" width={60} height={60}/>
             <Image className='opacity-50' src={HTML} alt="HTML" width={60} height={60}/>
             <Image className='opacity-50' src={JS} alt="JS" width={60} height={60}/>
@@ -34,17 +34,14 @@ export function First(){
             <Image className='opacity-50' src={Postgres} alt="Postgres" width={60} height={60}/>
             <Image className='opacity-50' src={Express} alt="Express" width={60} height={60}/>
             <Image className='opacity-50' src={Next} alt="Next" width={60} height={60}/>
-            <Image className='opacity-50' src={Typescript} alt="Typescript" width={60} height={60}/>
-            <Image className='opacity-50' src={Golang} alt="Golang" width={60} height={60}/>
-            <Image className='opacity-50' src={Graphql} alt="Graphql" width={60} height={60}/>
-            <Image className='opacity-50' src={MySQL} alt="MySQL" width={60} height={60}/>
+            <Image className='opacity-50' src={Typescript} alt="Typescript" width={60} height={60}/>  
         </div>
     )
 }
 
 export function Second(){
     return(
-        <div className='flex flex-row gap-10'>
+        <div className='flex flex-row gap-5'>
             <Image className='opacity-50' src={Git} alt="Git" width={60} height={60}/>
             <Image className='opacity-50' src={Jira} alt="Jira" width={60} height={60}/>
             <Image className='opacity-50' src={Numpy} alt="Numpy" width={60} height={60}/>
@@ -53,6 +50,9 @@ export function Second(){
             <Image className='opacity-50' src={C} alt="C" width={60} height={60}/>
             <Image className='opacity-50' src={Cpp} alt="C++" width={60} height={60}/>
             <Image className='opacity-50' src={Python} alt="Python" width={60} height={60}/>
+            <Image className='opacity-50' src={Golang} alt="Golang" width={60} height={60}/>
+            <Image className='opacity-50' src={Graphql} alt="Graphql" width={60} height={60}/>
+            <Image className='opacity-50' src={MySQL} alt="MySQL" width={60} height={60}/>
         </div>
     )
 }

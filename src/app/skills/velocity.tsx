@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { use, useRef } from "react";
 import {
   motion,
   useScroll,
@@ -7,14 +7,17 @@ import {
   useTransform,
   useMotionValue,
   useVelocity,
-  useAnimationFrame
+  useAnimationFrame,
+  MotionValue
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import { ParallaxProps } from "../../components/interfaces";
+import React from "react";
 
-export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
+export function ParallaxText({ children, baseVelocity = 100, leftShift = -20, 
+  rightShift=-70, widthupper, widthlower, numofchildren = 3}: ParallaxProps) {
   const baseX = useMotionValue(0);
-  const { scrollY, scrollYProgress } = useScroll();
+  const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
@@ -29,10 +32,7 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * have to replace for wrapping that works for you or dynamically
    * calculate
    */
-  const width = useRef(0);
-
-// Get viewport width on mount
-  const x = useTransform(baseX, (v) => `${wrap(-20,-70, v)}%`);
+  const x = useTransform(baseX, (x) => `${wrap(leftShift, rightShift, x)}%`);
 
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
@@ -53,6 +53,31 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     baseX.set(baseX.get() + moveBy);
   });
 
+  const renderedChildren: React.ReactNode[] = [];
+
+  // Loop to create and add child elements to the renderedChildren array
+  for (let i = 0; i < numofchildren; i++) {
+    React.Children.toArray(children).forEach((child, index) => {
+      renderedChildren.push(
+        <span key={index} className='block mr-10'>
+          {child}
+        </span>
+      );
+    });
+  }
+  // const marqueeVariants = {
+  //   animate: {
+  //     x: [0, -1000],
+  //     transition: {
+  //       x: {
+  //         repeat: Infinity,
+  //         repeatType: "loop",
+  //         duration: 5,
+  //         ease: "linear",
+  //       },
+  //     },
+  //   },
+  // };
   /**
    * The number of times to repeat the child text should be dynamically calculated
    * based on the size of the text and viewport. Likewise, the x motion value is
@@ -61,12 +86,19 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * dynamically generated number of children.
    */
   return (
-    <div className='flex flex-nowrap whitespace-nowrap overflow-hidden'>
-      <motion.div className="flex flex-nowrap whitespace-nowrap" style={{ x }}>
-        <span className='mr-10'> {children} </span>
-        <span className='mr-10'> {children} </span>
+    <div className={`h-16 ${widthupper} relative overflow-hidden`}>
+      <motion.div 
+        style={{ x }}
+        className={`flex whitespace-nowrap ${widthlower} absolute overflow-hidden`}>
+          {/* {React.Children.toArray(children).map((child, index) => (
+            <span key={index} className='block mr-10'>
+              {child}
+            </span>
+            ))
+            } */}
+          {renderedChildren}
+          
       </motion.div>
     </div>
-    
   );
 }
