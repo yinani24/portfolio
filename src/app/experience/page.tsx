@@ -9,7 +9,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 export default function Experience(){
   return (
-    <section id='experience' className='scroll-mt-24'>
+    <section id='experience' className='mt-24 scroll-mt-24'>
       {/* <div className=''>
         <TopBar width={"w-36"}>💼 Experience</TopBar>
         <h1 className='text-white mb-4 

@@ -22,7 +22,6 @@ import Typescript from '../../../public/icons/typescript.svg'
 import Golang from '../../../public/icons/go.svg'
 import Mongo from '../../../public/icons/mongodb.svg'
 import Postgres from '../../../public/icons/postgres.svg'
-import { First } from "./images"
 
 export default function Skills() {
   const width = 80
