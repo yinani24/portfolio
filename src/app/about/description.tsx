@@ -1,16 +1,28 @@
-import {motion, useInView} from 'framer-motion';
+"use client"
+
+import {motion, useAnimate, useInView, useScroll, useTransform} from 'framer-motion';
 import { useRef } from 'react';
+import {description} from '../../components/constants';
 
 export function Description(){
   const ref = useRef(null);
-  const isinView = useInView(ref, {once: true});
+  const pRef = useRef(null)
+  // const opacity = useTransform(scrollYProgress, [0, 1], [0, 1])
   return(
-    <div ref={ref} className='text-[#FFFFFF80] text-lg flex flex-col w-8/12 text-wrap justify-around gap-4'>
-      <p className='text-Raleway text-wrap'>I'm Yash, a full-time caffeine addict ☕️ and part-time software developer 👨‍💻. I'm currently in my senior year studying Computer Science 🖥️ at UC Davis 🐄.</p>
-      <p className='text-Raleway text-wrap'>I'm passionate about building web apps and have experience working with the MERN stack, Git, and more. How, you ask? 🤔 Through intense late-night coding sessions fueled by coffee ☕️ and personal projects 💻 beyond just my coursework 📚. I am even working on AI/ML research 🤖 ith Professor Rafatirad.</p>
-      <p className='text-Raleway text-wrap'>When I manage to peel myself away from my computer 💻, you can find me wielding a badminton racket 🏸, biking 🚲 around Davis, listening to business 💰 and finance 📈 podcasts, or attempting fancy cardistry card tricks (it's been while since I've practiced though).</p>
-      <p className='text-Raleway text-wrap'>I'm currently on the hunt for full-time SWE roles 👨‍💻 where I can expand my skills and build meaningful products. I'm open to joining startups to help drive innovation and change in my first role after graduation 🎓.</p>
-      <p className='text-Raleway text-pretty'>Feel free to check out some of my past projects 👇 or feel free to connect via my contact page 💬. I'm always down for a good conversation over coffee ☕️ or to get any career advice!</p>
-    </div>
+    <motion.div 
+      ref={ref}
+      initial={{opacity: 0, x: 100}}
+      whileInView={{opacity: 1, x: 0, transition: {ease: 'easeOut', duration: 0.9, bounce: 0.3, delay: 0.5, bounceDamping: 10, bounceStiffness: 100}}}
+      viewport={{ once: true, amount: 0.8 }}
+      className='text-[#FFFFFF80] overflow-x-hidden text-lg flex flex-col w-8/12 text-wrap justify-around gap-4'>
+      {description.map((desc, id) => (
+        <motion.p
+          key={id}
+          ref={pRef}
+          initial={{opacity: 0, x: 100}}
+          animate={{opacity: 1, x: 0, transition: {ease: 'easeOut', duration: 0.9, delay: id*0.9}}}
+          className='text-Raleway text-wrap'>{desc}</motion.p>
+      ))}
+    </motion.div>
   )
 }

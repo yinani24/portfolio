@@ -22,9 +22,6 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className='flex flex-row justify-around items-center h-screen'>
           <div className="flex flex-col w-56">
-              {/* <div className='rounded-2xl w-32 py-1 px-2 bg-[#7B4AE208]'>
-                <h1 className='text-[#7B4AE2] font-raleway font-bold text-center text-md'>👋 Hello, I'm</h1>
-              </div> */}
               <TopBar width={"w-32"}>👋 Hello, I'm</TopBar>
               <h1 className='text-white mb-4 font-[raleway] text-6xl font-extrabold'>
                 <span>{" "}</span>
@@ -36,17 +33,25 @@ export default function Home() {
                   4000,
                 ]}
                 wrapper="span"
-                speed={50}
+                speed={10}
                 repeat={Infinity}
                 />
               </h1>
             <div className='flex flex-row justify-around w-16'>
-              <Link target="_blank" href='https://www.github.com/yinani24/'>
-                <Image alt='Github' src={Github} width={25} height={25}/>
-              </Link>
-              <Link target="_blank" href='https://www.linkedin.com/in/yash-inani/'>
-                <Image alt='LinkedIn' src={LinkedIn} width={25} height={25}/>
-              </Link>
+              <motion.div 
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}>
+                <Link target="_blank" href='https://www.github.com/yinani24/'>
+                  <Image alt='Github' src={Github} width={25} height={25}/>
+                </Link>
+              </motion.div>
+              <motion.div 
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}>
+                <Link target="_blank" href='https://www.linkedin.com/in/yash-inani/'>
+                  <Image alt='LinkedIn' src={LinkedIn} width={25} height={25}/>
+                </Link>
+              </motion.div>
             </div>
           </div>
           
@@ -55,13 +60,6 @@ export default function Home() {
           <motion.div 
             className='flex flex-col justify-around h-20 '>  
               <ButtonLink Icon={GrContact} href='/#contact'>Contact Me</ButtonLink>
-              {/* <motion.button 
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className='border w-32 flex hover:text-white flex-row justify-center items-center border-[#7B4AE280] rounded-2xl text-[#7B4AE280]'>
-                <GrContact className='m-0.5 p-0.5'/>
-                <Link href='/#contact' className="text-[#7B4AE280] font-raleway font-semibold hover:text-white">Contact Me</Link>
-              </motion.button> */}
               <motion.button 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

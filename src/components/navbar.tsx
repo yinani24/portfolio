@@ -30,17 +30,18 @@ export default function NavBar() {
           </motion.button>
           <ul className='flex flex-row justify-around items-center w-[30rem]'>
             {navname.map((name, index) => (
-              <li key={index}>
+              <motion.li 
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                key={index} className="group">
                 <motion.button 
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className='text-[#ffffff] w-100 h-100 hover:text-[#7B4AE280]'>
-                    <Link className='font-[raleway] text-center bg-opactiy-50 
+                  className='text-[#ffffff] w-100 h-100 group-hover:text-[#7B4AE280]'>
+                    <Link className='font-[raleway] group-hover:text-[#7B4AE280] text-center bg-opactiy-50 
                       font-normal text-base hover:font-bold' href={`${name.route}`}> 
                         {name.title}
                     </Link>
                 </motion.button>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </motion.div>

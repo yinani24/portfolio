@@ -3,6 +3,7 @@
 import React from "react";
 import { FiSend } from "react-icons/fi";
 import { toast } from "react-hot-toast";
+import { motion } from "framer-motion";
 
 export default function ContactForm(){
     
@@ -47,9 +48,10 @@ export default function ContactForm(){
                 <label className='text-[#7B4AE2] font-Raleway font-bold text-lg mb-4'>Message</label>
                 <textarea name='message' className='w-96 h-36 rounded-xl p-4 mb-4 text-[rgba(255, 255, 255, 0.5)] font-Raleway' 
                     placeholder={`Hey Yash,\nI love your website...`}/>
-                <button type="submit" className='w-96 group text-base flex justify-center outline-none items-center gap-2 h-12 rounded-xl bg-[#7B4AE2] mb-4 text-white text-Raleway font-bold text-center transition-all focus:scale-110 '>
-                    Send{" "}<FiSend className='text-xs'/>
-                </button>
+                <motion.button 
+                    type="submit" className='w-96 group text-base flex justify-center outline-none items-center gap-2 h-12 rounded-xl bg-[#7B4AE2] mb-4 text-white text-Raleway font-bold text-center transition-all hover:text-lg focus:scale-110 '>
+                    Send{" "}<FiSend className='group-hover:text-lg text-xs'/>
+                </motion.button>
             </form>
         </div>
     )
