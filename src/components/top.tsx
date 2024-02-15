@@ -17,6 +17,9 @@ export function Top({topbar, children}: TopProps){
     }
     return(
         <motion.div
+        initial={{opacity: 0, x: -100}}
+        whileInView={{opacity: 1, x: 0, transition: {ease: 'easeInOut', duration: 0.5, type: 'tween', damping: 300, stiffness: 100}}}
+        viewport={{ once: true, amount: 0.5 }}
             className='container'>
             <TopBar width={topbar.width}>{topbar.children}</TopBar>
             <motion.h1 

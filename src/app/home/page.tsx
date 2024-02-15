@@ -40,6 +40,7 @@ export default function Home() {
         className='flex flex-row justify-around items-center h-screen overflow-hidden'>
           <motion.div 
               style={{opacity, x: x_left}}
+              transition={{ease: "easeInOut", duration: 1}}
               className="flex flex-col w-72">
               <TopBar width={"w-[118px]"}>👋 Hello, I'm</TopBar>
               <motion.h1
@@ -88,14 +89,15 @@ export default function Home() {
 
           <motion.div
             style={{opacity, x: x_right}}
-            className='flex flex-col justify-around h-20 '>  
+            transition={{ease: "easeInOut", duration: 1}}
+            className='flex flex-col justify-around h-20'>  
               <ButtonLink Icon={GrContact} href='/#contact'>Contact Me</ButtonLink>
               <motion.button 
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className='border-[#7B4AE280] group rounded-2xl flex 
-                flex-row justify-center items-center text-[#7B4AE280] font-semibold 
-                font-Raleway download hover:text-white hover:animate-[bounce_1s_ease-in-out_infinite]'>
+                flex-row justify-center items-center font-semibold 
+                font-Raleway download text-white animate-[bounce_1s_ease-in-out_infinite]'>
                 <Link className='' href='../../Yash_Inani_Resume_2024.pdf'>Resume</Link> 
                 <FaDownload className='m-0.5 p-0.5 ' />
               </motion.button>

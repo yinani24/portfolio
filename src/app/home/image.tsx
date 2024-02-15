@@ -50,7 +50,7 @@ export default function ImageFn(){
             animate={{
                 rotateX, rotateY
             }}
-            className='z-0 transition-all group duration-100 shadow shadow-white rounded-full hover:shadow-full hover:shadow-[#7B4AE2] hover:shadow-opacity-10 hover:bg-[#7B4AE2] hover:bg-opacity-10' 
+            className='z-0 transition-all group duration-100 shadow shadow-[#7B4AE2] rounded-full hover:shadow-full hover:shadow-[#7B4AE290] hover:shadow-opacity-10 hover:bg-[#7B4AE2] hover:bg-opacity-10' 
             ref={ref} 
             style={{rotate, opacity, x, transformStyle: "preserve-3d"}} 
             // transition={
@@ -58,12 +58,12 @@ export default function ImageFn(){
             // }
             >
             <motion.div
-                className='hover:shadow-full'
+                className='hover:shadow-full rounded-4xl h-full'
                 animate={{
                     transform: "translateZ(150px)",
                 }}>
                 <Image 
-                    className="rounded-full " 
+                    className="rounded-full" 
                     alt={'Face'} src={AR} width={450} quality={100} height={450}/>
             </motion.div>
         </motion.div>
