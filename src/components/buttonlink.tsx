@@ -9,7 +9,7 @@ export function ButtonLink({children, Icon, href}: MotionButton){
         <motion.button 
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className='group border w-32 flex  hover:bg-[#7B4AE21A] flex-row justify-center items-center border-[#7B4AE280] rounded-2xl text-[#7B4AE280]'>
+            className='group border w-32 flex hover:bg-[#7B4AE21A] flex-row justify-center items-center border-[#7B4AE280] rounded-2xl text-[#7B4AE280] hover:shadow hover:shadow-white hover:animate-pulse'>
             <Icon className='group-hover:text-white m-0.5 p-0.5'/>
             <Link href={href} className="text-[#7B4AE280] font-Raleway font-semibold group-hover:text-white">{children}</Link>
         </motion.button>
