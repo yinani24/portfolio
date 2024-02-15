@@ -2,6 +2,7 @@ import { ProjectsProps } from "./interfaces"
 import ARImage from '../../public/ar-image.png'
 import { GrContact } from "react-icons/gr";
 import React from "react";
+import { MdWork } from "react-icons/md";
 
 export const navname = [
     {'route':"/", 'title': 'Home'},
@@ -33,9 +34,9 @@ export const projects: ProjectsProps[] = [
 ] as const;
 
 export const experiences = [
-    {'title': "Experience 1", "description": "Description 1", "timeline": "3 months", "Icon": React.createElement(GrContact), "date": "2020-2021"},
-    {'title': "Experience 2", "description": "Description 2", "timeline": "3 months", "Icon": React.createElement(GrContact), "date": "2020-2021"},
-    {'title': "Experience 3", "description": "Description 3", "timeline": "3 months", "Icon": React.createElement(GrContact), "date": "2020-2021"}
+    {'title': "Experience 1", "description": "Description 1", "timeline": "3 months", "Icon": React.createElement(MdWork), "date": "2020-2021"},
+    {'title': "Experience 2", "description": "Description 2", "timeline": "3 months", "Icon": React.createElement(MdWork), "date": "2020-2021"},
+    {'title': "Experience 3", "description": "Description 3", "timeline": "3 months", "Icon": React.createElement(MdWork), "date": "2020-2021"},
 ] as const;
 
 export const description = [

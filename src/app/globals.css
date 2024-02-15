@@ -10,3 +10,7 @@
   font-weight: 400;
   src: url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
 }
+
+html{
+  --line-color: rgba(123, 74, 226, 0.5);
+}
