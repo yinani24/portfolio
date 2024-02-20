@@ -20,17 +20,17 @@ export const navname = [
 
 export const projects: ProjectsProps[] = [
     {'title': "Project 1", "description": "Description 1", "link": "Link 1", 
-    'tags': ['React', 'Node'], 'image': ARImage},
+    'tags': ['React', 'Node','All'], 'image': ARImage},
     {'title': "Project 2", "description": "Description 2", "link": "Link 2",
-    'tags': ['React', 'Node'], 'image': ARImage},
+    'tags': ['React', 'Node', 'All'], 'image': ARImage},
     {'title': "Project 3", "description": "Description 3", "link": "Link 3",
-    'tags': ['React', 'Node'], 'image': ARImage},
+    'tags': ['React', 'All'], 'image': ARImage},
     {'title': "Project 4", "description": "Description 4", "link": "Link 4",
-    'tags': ['React', 'Node'], 'image': ARImage},
+    'tags': ['React', 'Node','All'], 'image': ARImage},
     {'title': "Project 5", "description": "Description 5", "link": "Link 5",
-    'tags': ['React', 'Node'], 'image': ARImage},
+    'tags': ['React', 'Node','All'], 'image': ARImage},
     {'title': "Project 6", "description": "Description 6", "link": "Link 6",
-    'tags': ['React', 'Node'], 'image': ARImage},
+    'tags': ['React', 'All'], 'image': ARImage},
 ] as const;
 
 export const experiences = [
