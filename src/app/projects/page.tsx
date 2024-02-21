@@ -8,16 +8,23 @@ import { useInView, motion } from "framer-motion";
 import ProjectTag from './projectTag'
 
 export default function Project() {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState(["All"]);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   const handleTagChange = (newTag: string) => {
-    setTag(newTag);
+    if(tag.includes(newTag)){
+      const updatedTags = tag.filter((t) => t !== newTag);
+      setTag(updatedTags);
+    }
+    else{
+      setTag([...tag, newTag]);
+    }
+    
   };
 
   const filteredProjects = projects.filter((project) =>
-    project.tags.includes(tag)
+    tag.some((t) => project.tags.includes(t))
   );
 
   const cardVariants = {
@@ -37,16 +44,16 @@ export default function Project() {
           <ButtonLink Icon={GrContact} href='/#contact'>Contact Me</ButtonLink> */}
           <ProjectTag
             onClick={handleTagChange}
-            name="All"
-            isSelected={tag === "All"}/>
+            name={"All"}
+            isSelected={tag.includes("All")}/>
           <ProjectTag
             onClick={handleTagChange}
-            name="React"
-            isSelected={tag === "React"}/>
+            name={"React"}
+            isSelected={tag.includes("React")}/>
           <ProjectTag
             onClick={handleTagChange}
-            name="Node"
-            isSelected={tag === "Node"}/>
+            name={"Node"}
+            isSelected={tag.includes("Node")}/>
         </motion.div>
         <ul className='grid grid-cols-3 gap-10'>
           {filteredProjects.map((project, id) => (
@@ -55,9 +62,9 @@ export default function Project() {
               variants={cardVariants}
               initial={{opacity: 0, y: 50}}
               whileInView={{opacity: 1, y: 0}}
-              viewport={{once: true, amount: 0.4}}
+              viewport={{once: true, amount: 0.2}}
               animate={isInView? "initial": "hidden"}
-              transition={{ duration: 0.3, delay: id * 0.4, type: 'easeInOut', damping: 100, stiffness: 300 }}
+              transition={{ duration: 0.3, delay: id * 0.2, type: 'easeInOut', damping: 100, stiffness: 300 }}
             >
               <ProjectCard Proj={project}></ProjectCard>
             </motion.li>

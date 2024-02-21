@@ -14,3 +14,7 @@
 html{
   --line-color: rgba(123, 74, 226, 0.5);
 }
+
+.delayed-transform {
+  transition-delay: 0.1s;
+}
