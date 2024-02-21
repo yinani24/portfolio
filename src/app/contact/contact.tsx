@@ -54,13 +54,11 @@ export default function ContactForm(){
                     placeholder={`Hey Yash,\nI love your website...`}/>
                 <motion.button 
                     type="submit"
-                    whileFocus={{scale: 1.02}}
                     whileHover={{scale: 1.02}}
                     whileTap={{scale: 0.9}}
-                    transition={{delay: 0.1}}
-                    className='w-96 group text-base flex justify-center outline-none items-center gap-1 h-12 rounded-xl bg-[#7B4AE2] mb-4 text-white text-Raleway font-bold text-center transition-all'>
-                    <p className='group-hover:text-lg text-s delayed-transform'>Send{" "}</p>
-                    <FiSend className='group-hover:text-lg rotate-3 text-s delayed-transform'/>
+                    className='w-96 group text-base flex justify-center outline-none items-center gap-1 h-12 rounded-xl bg-[#7B4AE2] mb-4 text-white text-Raleway font-bold text-center hover:scale-105 transition-all'>
+                    <motion.p className='text-s'>Send</motion.p>
+                    <FiSend className='rotate-3 text-s'/>
                 </motion.button>
             </motion.form>
         </motion.div>
