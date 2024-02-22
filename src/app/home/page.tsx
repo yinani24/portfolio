@@ -42,7 +42,7 @@ export default function Home() {
               style={{opacity, x: x_left}}
               transition={{ease: "easeInOut", duration: 1}}
               className="flex flex-col w-72">
-              <TopBar width={"w-[118px]"}>👋 Hello, I'm</TopBar>
+              <TopBar width={"w-[118px]"}>👋 Hello, I&apos;m</TopBar>
               <motion.h1
                 animate={{color: ["#ffffff", "#7B4AE2", "#ffffff"]}}
                 transition={transition}

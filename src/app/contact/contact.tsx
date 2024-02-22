@@ -41,17 +41,17 @@ export default function ContactForm(){
     return(
         <motion.div className='flex flex-col items-center justify-center mt-10'>
             <motion.form 
-                initial={{opacity: 0, x: -100}}
-                whileInView={{opacity: 1, x: 0, transition: {ease: 'easeInOut', duration: 0.5, type: 'tween', damping: 300, stiffness: 100}}}
+                initial={{opacity: 0, x: -300}}
+                whileInView={{opacity: 1, x: 0, transition: {ease: 'easeInOut', duration: 0.5, delay:0.2, type: 'tween', damping: 300, stiffness: 100}}}
                 viewport={{ once: true, amount: 0.5 }}
                 onSubmit={handleSubmit} className='flex flex-col items-start justify-center border shadow-xl shadow-[#7B4AE280] border-[#7B4AE280] rounded-2xl p-5'>
                 <label className='text-[#7B4AE2] font-Raleway text-lg font-bold mb-4 mt-2'>Email *</label>
-                <input required name="senderEmail" className='w-96 h-12 rounded-xl p-4 mb-4 text-[rgba(255, 255, 255, 0.5)] font-Raleway' type='email' placeholder='alan.turing@example.com'/>
+                <input required name="senderEmail" className='w-96 h-12 rounded-xl p-4 mb-4 text-[rgba(255, 255, 255, 0.5)] font-Raleway' type='email' placeholder="alan.turing@example.com"/>
                 <label className='text-[#7B4AE2] font-Raleway font-bold text-lg mb-4'>Subject *</label>
-                <input required name="subject" className='w-96 h-12 rounded-xl p-4 mb-4 text-[rgba(255, 255, 255, 0.5)] font-Raleway' type='text' placeholder={`Let's build a company together`}/>
+                <input required name="subject" className='w-96 h-12 rounded-xl p-4 mb-4 text-[rgba(255, 255, 255, 0.5)] font-Raleway' type='text' placeholder='Let&apos;s build a company together'/>
                 <label className='text-[#7B4AE2] font-Raleway font-bold text-lg mb-4'>Message *</label>
                 <textarea name='message' maxLength={5000} required className='w-96 h-36 rounded-xl p-4 mb-4 text-[rgba(255, 255, 255, 0.5)] font-Raleway' 
-                    placeholder={`Hey Yash,\nI love your website...`}/>
+                    placeholder={"Hey Yash,\nI love your website..."}/>
                 <motion.button 
                     type="submit"
                     whileHover={{scale: 1.02}}
