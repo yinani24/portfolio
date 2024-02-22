@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Github from '../../../public/Github.png'
-import LinkedIn from '../../../public/LinkedIn.png'
+import Github from '../../../public/github.png'
+import LinkedIn from '../../../public/linkedin.png'
 import { SiGmail } from 'react-icons/si' 
 import { FaInstagram } from "react-icons/fa";
 import Link from 'next/link'

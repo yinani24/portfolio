@@ -7,7 +7,7 @@ import ARImage from "../../../public/ar-image.png";
 import {motion} from 'framer-motion'
 import { useRef, useState } from "react";
 import Link from "next/link";
-import Github from '../../../public/Github.png'
+import Github from '../../../public/github.png'
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 
 export default function ProjectCard({Proj} : {Proj: ProjectsProps}) {

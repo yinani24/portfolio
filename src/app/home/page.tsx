@@ -3,8 +3,8 @@ import React from "react"
 import { TypeAnimation } from "react-type-animation"
 // import {names} from '../../components/constants'
 import Image from 'next/image'
-import Github from '../../../public/Github.png'
-import LinkedIn from '../../../public/LinkedIn.png' 
+import Github from '../../../public/github.png'
+import LinkedIn from '../../../public/linkedin.png' 
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
