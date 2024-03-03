@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import {VerticalTimelineElement} from 'react-vertical-timeline-component';
 import "react-vertical-timeline-component/style.min.css";
 import {useInView} from 'react-intersection-observer';
+import Link from "next/link";
 
 export default function VerticalExperience({ item }: { item: any }) {
     const { ref, inView } = useInView({
@@ -27,12 +28,11 @@ export default function VerticalExperience({ item }: { item: any }) {
           className="vertical-timeline-element--work"
           >
           <h2 className='!text-white !font-Raleway !text-2xl !font-bold'>{item.title}</h2>
-          <p className='vertical-timeline-element-subtitle !m-0.5 
-            !text-[rgba(255, 255, 255, 0.5)] !font-Raleway !text-base 
-            !font-normal'>{item.description}</p>
+          <p className='!m-0.5 !text-[rgba(255, 255, 255, 0.5)] !font-Raleway !text-s !font-normal'>{item.description}</p>
           <div className='flex justify-between mt-3'>
             <p className='text-[#7B4AE2] font-Raleway text-left text-18 font-bold'>{item.timeline}</p>
-            <p className='text-[#7B4AE2] text-right font-Raleway text-base font-normal'>{item.date}</p>
+            <p className='text-[#7B4AE2] underline hover:text-white text-right font-Raleway text-base font-normal'><Link target="_blank" href={item.link}>{item.linkTitle}</Link></p>
+            {/* <p className='text-[#7B4AE2] text-right font-Raleway text-base font-normal'>{item.date}</p> */}
           </div>
         </VerticalTimelineElement>
       </motion.div>

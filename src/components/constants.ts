@@ -3,6 +3,7 @@ import ARImage from '../../public/ar-image.png'
 import { GrContact } from "react-icons/gr";
 import React from "react";
 import { MdWork } from "react-icons/md";
+import GDSC from '../../public/GDSC.svg'
 
 export const navname = [
     {'route':"/", 'title': 'Home'},
@@ -34,9 +35,12 @@ export const projects: ProjectsProps[] = [
 ] as const;
 
 export const experiences = [
-    {'title': "Experience 1", "description": "Description 1", "timeline": "3 months", "Icon": React.createElement(MdWork), "date": "2020-2021"},
-    {'title': "Experience 2", "description": "Description 2", "timeline": "3 months", "Icon": React.createElement(MdWork), "date": "2020-2021"},
-    {'title': "Experience 3", "description": "Description 3", "timeline": "3 months", "Icon": React.createElement(MdWork), "date": "2020-2021"},
+    {'title': "Student Researcher", "description": "AI/ML research to identify and help negate the biases in current LLM models under Professor Rafatirad", "timeline": "11 months", "Icon": React.createElement(MdWork), "date": "May 2023 - Present", "link": "https://web.cs.ucdavis.edu/~srafatir/pages/research.html", "linkTitle": "Professor Rafatirad's Page"},
+    {'title': "VP of Operations - GDSC @ UC Davis", "description": "Spearheaded events and finance for a 150+ member technical club, leading planning for 20+ events and workshop", "timeline": "5 months", "Icon": React.createElement(MdWork), "date": "Aug 2022 - Dec 2023", "link": "https://gdscucdavis.com/", "linkTitle": "GDSC Website"},
+    {'title': "SDE @ Truckpedia (Codelab)", "description": "Collaborated cross-functionally on an agile team to develop an interactive React Native mobile dashboard with visualizations for a trucking logisitics company", "timeline": "3 months", "Icon": React.createElement(MdWork), "date": "Oct 2023 - Dec 2023", "link": "https://www.truckpedia.io/", "linkTitle": "Truckpedia Website"},
+    {'title': "Finance Director - GDSC @ UC Davis", "description": "Spearheaded financing efforts raising over $2,500 in department and corporate sponsorships and managed event budgets up to $2,000 for the club's largest mid-year and annual showcase events", "timeline": "11 months", "Icon": React.createElement(MdWork), "date": "Sep 2022 - Jul 2023", "link": "https://gdscucdavis.com/", "linkTitle": "GDSC Website"},
+    {'title': "Outreach Associate @ SacHacks", "description": "Assisted in securing sponsorships to support participants' project development efforts, resulting in a 20% increase in overall participation", "timeline": "4 months", "Icon": React.createElement(MdWork), "date": "Jul 2022 - Oct 2022", "link": "https://sachacks.io/", "linkTitle": "SacHacks Website"},
+    {'title': "Tech Lead - GDSC @ UC Davis", "description": "Conducted a two-day workshop on the fundamentals of ML/AI, culminating in a project focused on developing a CNN model for the MNIST digit dataset", "timeline": "3 months", "Icon": React.createElement(MdWork), "date": "Jan 2022 - Jun 2022", "link": "https://youtu.be/oIObOsipPrk?si=z4ww2swiS4F9RqUd", "linkTitle": "Youtube Video"},
 ] as const;
 
 export const description = [
