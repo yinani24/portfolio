@@ -4,7 +4,7 @@ import { GrContact } from "react-icons/gr";
 import React from "react";
 import { MdWork } from "react-icons/md";
 import CNN from '../../public/projects/butterflycnn.png'
-import simulation from '../../public/projects/simulation.png'
+import simulation from '../../public/projects/Simulation.png'
 import FISC from '../../public/projects/fisc.png'
 import TextEditor from '../../public/projects/texteditor.png'
 import Shell from '../../public/projects/sshell.png'
