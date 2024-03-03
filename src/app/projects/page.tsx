@@ -6,6 +6,7 @@ import { Top } from "@/components/top";
 import { useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import ProjectTag from './projectTag'
+import { tags } from "@/components/constants";
 
 export default function Project() {
   const [tag, setTag] = useState(["All"]);
@@ -38,11 +39,18 @@ export default function Project() {
           initial={{opacity: 0, x: -100}}
           whileInView={{opacity: 1, x: 0, transition: {ease: 'easeInOut', duration: 0.5, type: 'tween', damping: 300, stiffness: 100}}}
           viewport={{ once: true, amount: 0.5 }}
-          className='flex flex-row gap-8 mb-14 mt-4'>
+          className='flex flex-row gap-4 justify-start mb-14 mt-4 flex-wrap'>
           {/* <ButtonLink Icon={GrContact} href='/#contact'>Contact Me</ButtonLink>
           <ButtonLink Icon={GrContact} href='/#contact'>Contact Me</ButtonLink>
           <ButtonLink Icon={GrContact} href='/#contact'>Contact Me</ButtonLink> */}
-          <ProjectTag
+          {tags.map((t, id) => (
+            <ProjectTag
+              key={id}
+              onClick={handleTagChange}
+              name={t}
+              isSelected={tag.includes(t)}/>
+          ))}
+          {/* <ProjectTag
             onClick={handleTagChange}
             name={"All"}
             isSelected={tag.includes("All")}/>
@@ -53,7 +61,7 @@ export default function Project() {
           <ProjectTag
             onClick={handleTagChange}
             name={"Node"}
-            isSelected={tag.includes("Node")}/>
+            isSelected={tag.includes("Node")}/> */}
         </motion.div>
         <ul className='grid grid-cols-3 gap-10'>
           {filteredProjects.map((project, id) => (

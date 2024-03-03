@@ -3,7 +3,15 @@ import ARImage from '../../public/ar-image.png'
 import { GrContact } from "react-icons/gr";
 import React from "react";
 import { MdWork } from "react-icons/md";
-import GDSC from '../../public/GDSC.svg'
+import CNN from '../../public/projects/butterflycnn.png'
+import simulation from '../../public/projects/simulation.png'
+import FISC from '../../public/projects/fisc.png'
+import TextEditor from '../../public/projects/texteditor.png'
+import Shell from '../../public/projects/sshell.png'
+import APInt from '../../public/projects/extendedintc.png'
+import Synthia from '../../public/projects/synthia.png'
+import Tiktok from '../../public/projects/tiktokpets.png';
+import waterlevels from '../../public/projects/waterlevels.png'
 
 export const navname = [
     {'route':"/", 'title': 'Home'},
@@ -14,24 +22,30 @@ export const navname = [
     {'route':'#contact', 'title': 'Contact'},
 ]
 
-// export const names = [
-//     {'name': "Yash Inani", "time": 1000},
-//     {'name': "a Developer", "time": 1000},
-// ]
-
 export const projects: ProjectsProps[] = [
-    {'title': "Project 1", "description": "Description 1", "link": "Link 1", 
-    'tags': ['React', 'Node','All'], 'image': ARImage},
-    {'title': "Project 2", "description": "Description 2", "link": "Link 2",
-    'tags': ['React', 'Node', 'All'], 'image': ARImage},
-    {'title': "Project 3", "description": "Description 3", "link": "Link 3",
-    'tags': ['React', 'All'], 'image': ARImage},
-    {'title': "Project 4", "description": "Description 4", "link": "Link 4",
-    'tags': ['React', 'Node','All'], 'image': ARImage},
-    {'title': "Project 5", "description": "Description 5", "link": "Link 5",
-    'tags': ['React', 'Node','All'], 'image': ARImage},
-    {'title': "Project 6", "description": "Description 6", "link": "Link 6",
-    'tags': ['React', 'All'], 'image': ARImage},
+    {'title': "Simulation: Crypto Currency", "description": "A customizable cryptocurrency platform that enables all users to act as miners and traders across multiple simulated environments.", 
+    "link": "https://github.com/yinani24/simulation", 'tags':  ['Golang', 'MongoDB', 'Fiber', 'GORM', 'PostgreSQL', 'React', 'TypeScript', 'TailwindCSS', 'All'], 
+    'image': simulation, width: 500, height: 500},
+    {'title': "Text Editor", "description": "A command line-based text editor addressing the need for insertion, deletion, undo, redo functionalities, and seamless cursor movement.", "link": "https://github.com/yinani24/Text-Editor",
+    'tags': ['C++', 'All'], 'image': TextEditor, width: 250, height: 200},
+    {'title': "Shell", "description": "UNIX shell program written in C that handles command parsing, execution, and management, including input/output redirection, piping, and background process execution.", "link": "https://github.com/yinani24/shell",
+    'tags': ['C', 'All'], 'image': Shell, width: 500, height: 500},
+    {'title': "Arbitrary Precision Int in C", "description": "APInt in C, optimizing memory usage and performance for efficient arithmetic operations such as addition, multiplication, left shift, power, and comparison.", "link": "https://github.com/yinani24/Extended-Int-C",
+    'tags': ['C', 'All'], 'image': APInt, width: 500, height: 500},
+    {'title': "FISC/SISC", "description": "FISC and SISC (Four/Six Instruction Set Computer) assembler and simulator for translating and executing FISC assembly code, featuring label handling, efficient opcode conversion, and cycle-by-cycle simulation.", "link": "https://github.com/yinani24/fisc_sisc",
+    'tags':  ['C++', 'All'], 'image': FISC, width: 500, height: 500},
+    {'title': "Synthia AI", "description": "Cost-effective and convenient solution to conduct practice interviews, considering the difficulty of scheduling sessions with others on external platforms.", "link": "https://github.com/yinani24/calhacks_2023",
+    'tags': ['Flask', 'Python', 'React', 'JavaScript', 'OpenAI', 'Hume API', 'All'], 'image': Synthia, width: 400, height: 400},
+    {'title': "Butterfly or Moth CNN", "description": "CNN model capable of accurately classifying 100 different types of butterflies or moths.", "link": "https://github.com/yinani24/Butterfly-cnn",
+    'tags': ['Python', 'Keras', 'Pandas', 'Tensorflow', 'All'], 'image': CNN, width: 800, height: 800},
+    {'title': "Waterlevels", "description": "A website allowing users to view the water levels of various lakes in California, with the added feature of selecting a specific month to observe historical water levels", "link": "https://github.com/yinani24/waterlevels",
+    'tags': ['React', 'JavaScript','Charts', 'CSS', 'All'], 'image': waterlevels, width: 800, height: 800},
+    {'title': "TikTok Pets", "description": "A game that allows users to vote on pet videos and determine the best one based on collective preferences.", "link": "https://github.com/yinani24/tiktok_pets",
+    'tags': ['Node', 'Express', 'MySQL', 'JavaScript', 'CSS', 'All'], 'image': Tiktok, width: 500, height: 500},
+] as const;
+
+export const tags = [
+    "All", "React", "Node", "Python", "C++", "C", "Flask", "Golang", "MongoDB", "Fiber", "GORM", "PostgreSQL", "TypeScript", "TailwindCSS", "Keras", "Pandas", "Tensorflow", "CSS", "Express", "MySQL", "JavaScript"
 ] as const;
 
 export const experiences = [

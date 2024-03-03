@@ -32,6 +32,8 @@ export interface ProjectsProps{
     tags: string[];
     image: any;
     link: string;
+    width: number;
+    height: number;
 }
 
 export interface EmailTemplateProps {

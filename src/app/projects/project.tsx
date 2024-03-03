@@ -100,7 +100,7 @@ export default function ProjectCard({Proj} : {Proj: ProjectsProps}) {
                     transform: "translateZ(50px)",
                 }}
                 className='w-full flex justify-center items-center'>
-                <Image src={ARImage} alt="hello" width={300} height={300} className='rounded-lg'></Image>
+                <Image src={Proj.image} alt="hello" width={Proj.width} height={Proj.height} className='rounded-lg'></Image>
             </motion.div>
         </motion.div>
     )
