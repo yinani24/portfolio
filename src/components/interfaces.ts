@@ -1,5 +1,3 @@
-import React, { MouseEventHandler, ReactHTMLElement } from "react";
-
 export interface ParallaxProps {
     children: any;
     baseVelocity: number;
@@ -46,4 +44,9 @@ export interface ProjectTag {
     name: string, 
     onClick: (name: string) => void, 
     isSelected: boolean 
+}
+
+export interface TimeWorked{
+    startMonth: number;
+    startYear: number;
 }

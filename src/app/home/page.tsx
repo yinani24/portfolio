@@ -98,7 +98,7 @@ export default function Home() {
                 className='border-[#7B4AE280] group rounded-2xl flex 
                 flex-row justify-center items-center font-semibold 
                 font-Raleway download text-white animate-[bounce_1s_ease-in-out_infinite]'>
-                <Link className='' href='../../Yash_Inani_Resume_2024.pdf'>Resume</Link> 
+                <Link className='' href='../../Yash_Inani_Resume.pdf'>Resume</Link> 
                 <FaDownload className='m-0.5 p-0.5 ' />
               </motion.button>
           </motion.div>
