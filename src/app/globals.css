@@ -32,6 +32,7 @@ html{
 }
 .personal-site h1 { margin: 0 0 14px; font-size: 36px; font-weight: bold; line-height: 1.2; }
 .personal-site h2 { margin: 0 0 10px; font-size: 24px; font-weight: bold; line-height: 1.3; }
+.personal-site h3 { margin: 24px 0 10px; font-size: 20px; font-weight: bold; line-height: 1.3; }
 .personal-site p { margin: 10px 0; }
 .personal-site a { color: #0000ee; text-decoration: underline; text-underline-offset: 2px; }
 .personal-site a:visited { color: #551a8b; }
@@ -49,6 +50,7 @@ html{
 .personal-site .project-directory p { margin: 4px 0; }
 .personal-site .project-tools { font: 14px/1.5 "Courier New", Courier, monospace; color: #555; }
 .personal-site .project-filter { margin: 14px 0; font-size: 16px; }
+.personal-site .project-count { font-size: 14px; }
 .personal-site select,
 .personal-site input,
 .personal-site textarea,
