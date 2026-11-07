@@ -19,60 +19,92 @@ html{
   transition-delay: 0.1s;
 }
 
-/* Document-like homepage; standalone legacy routes retain their styles. */
+/* Homepage styles are scoped so legacy routes keep their original layout. */
 .personal-site {
-  box-sizing: content-box;
-  max-width: 700px;
-  padding: 36px;
-  color: #111;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 36px clamp(20px, 4vw, 64px);
+  color: #171717;
   background: #fff;
-  font: 18px/1.3 "Times New Roman", Times, serif;
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   overflow-wrap: break-word;
   color-scheme: light;
 }
-.personal-site h1 { margin: 0 0 14px; font-size: 36px; font-weight: bold; line-height: 1.2; }
-.personal-site h2 { margin: 0 0 10px; font-size: 24px; font-weight: bold; line-height: 1.3; }
-.personal-site h3 { margin: 24px 0 10px; font-size: 20px; font-weight: bold; line-height: 1.3; }
-.personal-site p { margin: 10px 0; }
-.personal-site .personal-intro { display: grid; grid-template-columns: minmax(0, 1fr) 168px; align-items: start; gap: 24px; }
-.personal-site .personal-portrait { display: block; width: 168px; height: auto; border: 1px solid #a0a0a0; padding: 3px; }
-.personal-site a { color: #0000ee; text-decoration: underline; text-underline-offset: 2px; }
-.personal-site a:visited { color: #551a8b; }
-.personal-site a:hover { text-decoration-thickness: 2px; }
-.personal-site :focus-visible { outline: 2px solid #0000ee; outline-offset: 4px; }
-.personal-site nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 20px; }
-.personal-site hr { margin: 20px 0; border: 0; border-top: 1px solid #a0a0a0; }
-.personal-site small { font-size: 14px; }
-.personal-site ul { list-style: disc; padding-left: 24px; margin: 12px 0; }
-.personal-site li { margin: 8px 0; }
-.personal-site details { margin: 14px 0; }
-.personal-site summary { cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-.personal-site .project-directory { list-style: none; padding: 0; margin: 18px 0; }
-.personal-site .project-directory li { margin: 0 0 20px; }
-.personal-site .project-directory p { margin: 4px 0; }
-.personal-site .project-tools { font: 14px/1.5 "Courier New", Courier, monospace; color: #555; }
-.personal-site .project-filter { margin: 14px 0; font-size: 16px; }
-.personal-site .project-count { font-size: 14px; }
+.personal-site h1 { margin: 0; font-size: 36px; font-weight: 700; letter-spacing: -.04em; line-height: 1.15; }
+.personal-site h2 { margin: 0 0 16px; font-size: 30px; font-weight: 650; letter-spacing: -.025em; line-height: 1.2; }
+.personal-site h3 { margin: 24px 0 10px; font-size: 21px; font-weight: 650; line-height: 1.3; }
+.personal-site p { margin: 12px 0; }
+.personal-site .site-subtitle { margin-top: 8px; color: #555; }
+.personal-site .section-label,
+.personal-site .chapter-date,
+.personal-site .contribution-status { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: #555; }
+.personal-site .section-label { margin: 0 0 14px; text-transform: uppercase; }
+.personal-site .section-intro { max-width: 80ch; margin-bottom: 24px; }
+.personal-site .personal-intro { display: grid; grid-template-columns: minmax(0, 1fr) 260px; align-items: center; gap: clamp(28px, 5vw, 80px); padding: 16px 0; }
+.personal-site .personal-intro h2 { max-width: 23ch; font-size: clamp(30px, 3.5vw, 48px); line-height: 1.1; letter-spacing: -.035em; }
+.personal-site .personal-intro p { max-width: 70ch; }
+.personal-site .intro-lead { font-size: 20px; line-height: 1.5; }
+.personal-site .intro-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 20px; font-size: 15px; font-weight: 600; }
+.personal-site .personal-portrait { display: block; width: 260px; height: auto; border: 1px solid #ccc; padding: 5px; }
+.personal-site a { color: #1647bb; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.personal-site a:visited { color: #1647bb; }
+.personal-site a:hover { color: #102f7a; text-decoration-thickness: 2px; }
+.personal-site :focus-visible { outline: 2px solid #1647bb; outline-offset: 4px; }
+.personal-site nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 16px; font-size: 15px; }
+.personal-site nav[aria-label="On this page"] { margin-top: 24px; font-weight: 600; }
+.personal-site hr { margin: 36px 0; border: 0; border-top: 1px solid #ccc; }
+.personal-site small { font-size: 13px; }
+.personal-site ul { list-style: disc; padding-left: 22px; margin: 12px 0; }
+.personal-site li { margin: 12px 0; }
+.personal-site details { margin: 18px 0; }
+.personal-site summary { cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.personal-site .project-directory { list-style: none; padding: 0; margin: 20px 0; }
+.personal-site .project-directory li { margin: 0; padding: 20px 0; border-top: 1px solid #ddd; }
+.personal-site .project-directory li > a { font-weight: 650; font-size: 20px; }
+.personal-site .project-directory p { margin: 8px 0; }
+.personal-site .project-tools { font-size: 13px; color: #555; }
+.personal-site .project-credit { line-height: 1.4; }
+.personal-site .project-filter { margin: 20px 0 8px; font-size: 15px; }
+.personal-site .project-count { font-size: 13px; color: #555; }
+.personal-site .project-chapters,
+.personal-site .contribution-grid,
+.personal-site .research-community { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+.personal-site .project-chapters { margin-top: 28px; }
+.personal-site .project-chapters > section + section,
+.personal-site .research-community > section + section { border-left: 1px solid #ddd; padding-left: 48px; }
+.personal-site .project-chapters h3 { font-size: 28px; margin: 8px 0 12px; }
+.personal-site .chapter-date { margin: 0; }
+.personal-site .contribution-grid h3 { margin: 10px 0; font-size: 24px; }
+.personal-site .contribution-status { color: #1647bb; }
+.personal-site #research > p:first-of-type { font-size: 22px; font-weight: 600; line-height: 1.35; }
 .personal-site select,
 .personal-site input,
 .personal-site textarea,
-.personal-site button { font: inherit; color: #111; border: 1px solid #777; border-radius: 0; background: #fff; padding: 4px 6px; max-width: 100%; }
-.personal-site button { background: #eee; padding: 6px 12px; cursor: pointer; }
+.personal-site button { font: inherit; color: #171717; border: 1px solid #888; border-radius: 0; background: #fff; padding: 6px 8px; max-width: 100%; }
+.personal-site button { background: #f2f2f2; padding: 8px 16px; cursor: pointer; }
 .personal-site button:active { background: #ddd; }
 .personal-site button:disabled { cursor: wait; opacity: .65; }
-.personal-site .plain-contact { max-width: 480px; margin: 16px 0; }
+.personal-site .plain-contact { max-width: 540px; margin: 16px 0; }
 .personal-site .plain-contact label { display: block; margin-top: 12px; margin-bottom: 4px; }
 .personal-site .plain-contact input,
 .personal-site .plain-contact textarea { display: block; width: 100%; }
 .personal-site .plain-contact textarea { resize: vertical; }
 .personal-site .plain-contact button { margin-top: 12px; }
-.personal-site footer { font-size: 16px; }
-@media (max-width: 600px) {
-  .personal-site { padding: 24px 20px; }
-  .personal-site h1 { font-size: 30px; }
+.personal-site footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; font-size: 14px; color: #555; }
+@media (max-width: 767px) {
+  .personal-site { padding: 24px 20px; font-size: 16px; }
+  .personal-site h1 { font-size: 32px; }
+  .personal-site h2 { font-size: 26px; }
+  .personal-site .personal-intro { grid-template-columns: 1fr; gap: 24px; }
+  .personal-site .personal-portrait { grid-row: 1; width: 160px; }
+  .personal-site .intro-lead { font-size: 18px; }
+  .personal-site .project-chapters,
+  .personal-site .contribution-grid,
+  .personal-site .research-community { grid-template-columns: 1fr; gap: 28px; }
+  .personal-site .project-chapters > section + section,
+  .personal-site .research-community > section + section { border-left: 0; padding-left: 0; border-top: 1px solid #ccc; padding-top: 28px; }
   .personal-site .project-filter label { display: block; margin-bottom: 6px; }
-}
-@media (max-width: 520px) {
-  .personal-site .personal-intro { grid-template-columns: 1fr; gap: 12px; }
-  .personal-site .personal-portrait { grid-row: 1; width: 140px; }
+  .personal-site hr { margin: 28px 0; }
 }
