@@ -1,13 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import { Toaster } from 'react-hot-toast'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'Yash Inani Portfolio',
-  description: 'A website to showcase Yash Inani\'s projects and skills',
+  title: "Yash Inani's Home Page",
+  description: 'Yash Inani — software engineer in San Francisco. Projects, background, and a little corner of the web.',
 }
 
 export default function RootLayout({
@@ -16,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='!scroll-smooth'>
-      <body className={inter.className}>{children}
+    <html lang="en">
+      <body>{children}
       <Toaster 
         toastOptions={{
           success: {

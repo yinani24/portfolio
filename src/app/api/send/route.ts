@@ -1,27 +1,49 @@
-"use server";
-
-import { NextApiResponse } from 'next';
 import { EmailTemplate } from '@/components/emailtemplate';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.FROM_EMAIL || '';
-const toEmail = process.env.TO_EMAIL || '';
+export async function POST(req: Request) {
+  let body: unknown;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid request.' }, { status: 400 });
+  }
 
-export async function POST(req: any, res: NextApiResponse) {
-    const { email, subject, message } = await req.json();
+  if (!body || typeof body !== 'object') {
+    return NextResponse.json({ error: 'Invalid request.' }, { status: 400 });
+  }
 
-    try {
-        const data = await resend.emails.send({
-            from: fromEmail,
-            to: toEmail,
-            subject: "Contact Form Submission",
-            reply_to: email,
-            react: EmailTemplate({ email: email, subject: subject, body: message }),
-        });
-        return NextResponse.json(data);
-    } catch (error) {
-        return NextResponse.json({error});
+  const { email, subject, message } = body as Record<string, unknown>;
+  if (
+    typeof email !== 'string' || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+    typeof subject !== 'string' || !subject.trim() || subject.length > 200 ||
+    typeof message !== 'string' || !message.trim() || message.length > 5000
+  ) {
+    return NextResponse.json({ error: 'Please provide a valid email, subject, and message.' }, { status: 400 });
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  const fromEmail = process.env.FROM_EMAIL;
+  const toEmail = process.env.TO_EMAIL;
+  if (!apiKey || !fromEmail || !toEmail) {
+    return NextResponse.json({ error: 'Messaging is temporarily unavailable. Please use LinkedIn.' }, { status: 503 });
+  }
+
+  try {
+    const resend = new Resend(apiKey);
+    const { data, error } = await resend.emails.send({
+      from: fromEmail,
+      to: toEmail,
+      subject: 'Contact Form Submission',
+      reply_to: email,
+      react: EmailTemplate({ email, subject, body: message }),
+    });
+    if (error || !data) {
+      return NextResponse.json({ error: 'Message could not be sent.' }, { status: 502 });
     }
+    return NextResponse.json({ success: true });
+  } catch {
+    return NextResponse.json({ error: 'Message could not be sent.' }, { status: 502 });
+  }
 }
