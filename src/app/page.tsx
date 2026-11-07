@@ -1,6 +1,7 @@
 import { homepageProjects } from "@/components/homepage-projects";
 import ProjectDirectory from "@/components/project-directory";
 import PlainContactForm from "@/components/plain-contact-form";
+import ExperienceSection from "@/components/experience-section";
 import Image from "next/image";
 import headshot from "../../public/yash-inani-headshot.jpg";
 
@@ -24,6 +25,7 @@ export default function HomePage() {
           <a href="#open-source">Open source</a>
           <a href="#research">Research</a>
           <a href="#judging">Judging</a>
+          <a href="#experience">Experience</a>
         </nav>
       </header>
       <hr />
@@ -93,28 +95,7 @@ export default function HomePage() {
       </section>
       </div>
       <hr />
-      <section id="experience" aria-labelledby="background-heading">
-        <h2 id="background-heading">Background</h2>
-        <p>My work has taken me through AI, financial technology, and full-stack development. At UC Davis, I also worked on research into bias in language models.</p>
-        <p>Away from the keyboard: badminton, bike rides, and business and finance podcasts.</p>
-        <details>
-          <summary>Experience and community</summary>
-          <ul>
-            <li><strong>Velanir:</strong> Founding AI engineer.</li>
-            <li><strong>Payabli:</strong> Software engineering in financial technology.</li>
-            <li><strong>Kolign:</strong> Software engineering internship, working on existing and new products.</li>
-            <li><strong>UC Davis:</strong> AI/ML research with Professor Rafatirad, studying bias in language models.</li>
-            <li><strong>Truckpedia / CodeLab:</strong> React Native development for trucking logistics.</li>
-            <li><strong>Google Developer Student Club:</strong> Operations, fundraising, and technical workshops at UC Davis.</li>
-            <li><strong>SacHacks:</strong> Outreach and sponsorship support.</li>
-          </ul>
-          <p><a href="https://www.linkedin.com/in/yash-inani">Full experience on LinkedIn</a> · <a href="/Yash_Inani_Resume.pdf">Download my résumé</a></p>
-        </details>
-        <details id="skills">
-          <summary>Languages and tools</summary>
-          <p>TypeScript, JavaScript, Python, Go, C, C++, React, Next.js, React Native, Node.js, Express, GraphQL, PostgreSQL, MySQL, MongoDB, PyTorch, NumPy, Pandas, Git, and Jira.</p>
-        </details>
-      </section>
+      <ExperienceSection />
       <hr />
       <section id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Say hello</h2>
