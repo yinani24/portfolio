@@ -10,8 +10,8 @@ export default function HomePage() {
   return (
     <main className="personal-site" id="top">
       <header>
-        <h1>Yash Inani&apos;s Home Page</h1>
-        <p><em>Software engineer · San Francisco</em></p>
+        <h1>Yash Inani</h1>
+        <p className="site-subtitle">Founding AI engineer · San Francisco</p>
         <nav aria-label="Personal links">
           <a href="https://github.com/yinani24">Personal GitHub</a>{" "}
           <a href="https://github.com/velanir-ai-manager">Work GitHub</a>{" "}
@@ -29,38 +29,45 @@ export default function HomePage() {
       <hr />
       <section id="about" className="personal-intro" aria-labelledby="about-heading">
         <div>
-        <h2 id="about-heading">Hello, I&apos;m Yash.</h2>
-        <p>I build software, work with AI, and enjoy figuring out how things work. I&apos;m a founding AI engineer at Velanir.</p>
-        <p>I studied Computer Science at UC Davis and grew up in Dubai. This is my little corner of the web.</p>
+          <p className="section-label">Engineering · Open source · Research</p>
+          <h2 id="about-heading">I build AI systems and the tools that make them work.</h2>
+          <p className="intro-lead">I&apos;m a founding AI engineer at Velanir, an OpenClaw contributor, and a coauthor of research on bias in large language models.</p>
+          <p>I studied Computer Science at UC Davis and grew up in Dubai. My work spans AI agents, financial infrastructure, and full-stack software.</p>
+          <p className="intro-links"><a href="#open-source">Explore my contributions →</a><a href="#research">Read my research →</a></p>
         </div>
-        <Image className="personal-portrait" src={headshot} alt="Yash Inani" width={168} height={168} sizes="(max-width: 520px) 140px, 168px" priority />
-      </section>
-      <hr />
-      <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Things I&apos;ve worked on</h2>
-        <p>Two chapters of building: before and after AI became part of my coding process. “Pre-AI” and “post-AI” describe how I wrote the code, not whether the project itself uses AI.</p>
-        <ProjectDirectory projects={homepageProjects} featuredTitles={featuredTitles} />
-        <p><a href="https://github.com/yinani24?tab=repositories">More code on GitHub →</a></p>
+        <Image className="personal-portrait" src={headshot} alt="Yash Inani" width={260} height={260} sizes="(max-width: 767px) 160px, 260px" priority />
       </section>
       <hr />
       <section id="open-source" aria-labelledby="open-source-heading">
-        <h2 id="open-source-heading">Open source</h2>
-        <p>I also contribute as <a href="https://github.com/velanir-ai-manager">velanir-ai-manager</a>. My work on OpenClaw includes these merged fixes:</p>
-        <ul className="project-directory">
+        <p className="section-label">Open source · Two merged contributions</p>
+        <h2 id="open-source-heading">Contributing to OpenClaw</h2>
+        <p className="section-intro">I contribute to OpenClaw as <a href="https://github.com/velanir-ai-manager">velanir-ai-manager</a>, improving how agents understand conversations and deliver reliable responses. Both contributions below were merged upstream.</p>
+        <ul className="project-directory contribution-grid">
           <li>
-            <a href="https://github.com/openclaw/openclaw/pull/101856">Make Teams quote replies understandable to the agent</a>
-            <p>Preserves quoted message text in Microsoft Teams replies, with full-text retrieval for one-to-one chats and a preview fallback.</p>
+            <p className="contribution-status">Merged · Microsoft Teams</p>
+            <h3><a href="https://github.com/openclaw/openclaw/pull/101856">Giving agents the context they were missing</a></h3>
+            <p>Teams quote replies were losing the message being referenced. My fix brings that context into the agent&apos;s conversation, retrieves the full message in one-to-one chats, and preserves a preview fallback.</p>
             <small>OpenClaw #101856 · Merged July 9, 2026 · Built with Claude Code</small>
           </li>
           <li>
-            <a href="https://github.com/openclaw/openclaw/pull/101036">Keep internal reasoning markers out of replies</a>
-            <p>Sanitizes streamed assistant text so provider markers don’t appear in user-facing messages and scheduled summaries.</p>
+            <p className="contribution-status">Merged · Agent reliability</p>
+            <h3><a href="https://github.com/openclaw/openclaw/pull/101036">Keeping internal model markers out of user replies</a></h3>
+            <p>Provider reasoning markers could leak into streamed replies and scheduled summaries. My fix applies OpenClaw&apos;s visible-text sanitizer before those messages reach users.</p>
             <small>OpenClaw #101036 · Merged July 6, 2026</small>
           </li>
         </ul>
         <p><a href="https://github.com/openclaw/openclaw/pulls?q=is%3Apr+author%3Avelanir-ai-manager">All my OpenClaw pull requests →</a></p>
       </section>
       <hr />
+      <section id="projects" aria-labelledby="projects-heading">
+        <p className="section-label">Selected projects</p>
+        <h2 id="projects-heading">Two chapters of building</h2>
+        <p className="section-intro">From writing every line myself to building alongside AI coding assistants. The distinction is how I developed each project.</p>
+        <ProjectDirectory projects={homepageProjects} featuredTitles={featuredTitles} />
+        <p><a href="https://github.com/yinani24?tab=repositories">More code on GitHub →</a></p>
+      </section>
+      <hr />
+      <div className="research-community">
       <section id="research" aria-labelledby="research-heading">
         <h2 id="research-heading">Research</h2>
         <p><a href="https://arxiv.org/abs/2511.14153">A Comprehensive Study of Implicit and Explicit Biases in Large Language Models</a></p>
@@ -68,7 +75,6 @@ export default function HomePage() {
         <p>We studied how language models detect explicit and implicit social biases, using benchmarks including StereoSet and CrowS-Pairs. The work explores a bias-identification framework and ways to improve detection through prompting, fine-tuning, and data augmentation.</p>
         <p><a href="https://arxiv.org/abs/2511.14153">Abstract and citation</a> · <a href="https://arxiv.org/pdf/2511.14153">Read the paper (PDF)</a></p>
       </section>
-      <hr />
       <section id="judging" aria-labelledby="judging-heading">
         <h2 id="judging-heading">Judging, mentoring &amp; community</h2>
         <p>I also review other people&apos;s work, from hackathon demos to AI safety research.</p>
@@ -85,9 +91,10 @@ export default function HomePage() {
         </ul>
         <p>At UC Davis, I also helped organize technical workshops and events through Google Developer Student Club and supported outreach at SacHacks.</p>
       </section>
+      </div>
       <hr />
       <section id="experience" aria-labelledby="background-heading">
-        <h2 id="background-heading">A little background</h2>
+        <h2 id="background-heading">Background</h2>
         <p>My work has taken me through AI, financial technology, and full-stack development. At UC Davis, I also worked on research into bias in language models.</p>
         <p>Away from the keyboard: badminton, bike rides, and business and finance podcasts.</p>
         <details>
