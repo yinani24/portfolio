@@ -26,7 +26,7 @@ export default function ExperienceSection() {
       <div className="experience-layout">
         <div>
           <div className="current-role">
-            <p className="role-eyebrow"><span aria-hidden="true" />Currently</p>
+            <p className="role-eyebrow">Currently</p>
             <h3>Velanir</h3>
             <p className="current-role-title">Founding AI engineer</p>
             <p>Building AI systems. Contributing to the open-source tools behind them.</p>

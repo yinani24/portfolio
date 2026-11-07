@@ -84,34 +84,33 @@ html{
 .personal-site .experience-heading h2 { margin: 0; font-size: clamp(30px, 3vw, 40px); }
 .personal-site .resume-link { font-size: 15px; font-weight: 600; }
 .personal-site .experience-layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: start; }
-.personal-site .current-role { padding: 28px 32px; background: #1647bb; color: #fff; }
-.personal-site .current-role .role-eyebrow { display: flex; align-items: center; gap: 8px; margin: 0 0 16px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
-.personal-site .role-eyebrow > span { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.personal-site .current-role { padding: 0 0 24px; border-bottom: 1px solid #ccc; }
+.personal-site .current-role .role-eyebrow { margin: 0 0 12px; font-size: 13px; font-weight: 600; }
 .personal-site .current-role h3 { margin: 0; font-size: 32px; letter-spacing: -.025em; }
 .personal-site .current-role-title { margin: 4px 0 16px; font-size: 19px; }
 .personal-site .current-role > p:not([class]) { font-size: 15px; max-width: 48ch; }
-.personal-site .current-role a { display: inline-block; margin-top: 10px; color: #fff; font-size: 14px; font-weight: 600; }
-.personal-site .current-role :focus-visible { outline-color: #fff; }
-.personal-site .experience-timeline { margin: 0 0 12px 32px; padding: 8px 0 0 27px; list-style: none; border-left: 1px solid #c6d1ea; }
+.personal-site .current-role a { display: inline-block; margin-top: 10px; font-size: 14px; font-weight: 600; }
+.personal-site .experience-timeline { margin: 0 0 12px 4px; padding: 8px 0 0 27px; list-style: none; border-left: 1px solid #ccc; }
 .personal-site .experience-timeline li { position: relative; margin: 0; padding: 22px 0; border-bottom: 1px solid #e5e7eb; }
 .personal-site .experience-timeline li:last-child { border-bottom: 0; padding-bottom: 12px; }
-.personal-site .experience-timeline li::before { position: absolute; content: ""; width: 9px; height: 9px; border: 2px solid #1647bb; background: #fff; border-radius: 50%; left: -32px; top: 31px; }
+.personal-site .experience-timeline li::before { position: absolute; content: ""; width: 9px; height: 9px; border: 2px solid #777; background: #fff; border-radius: 50%; left: -32px; top: 31px; }
 .personal-site .experience-role-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
 .personal-site .experience-role-heading h3 { margin: 0; font-size: 20px; }
 .personal-site .experience-role-heading > span { font-size: 13px; color: #555; }
 .personal-site .experience-timeline p { margin: 6px 0 0; font-size: 15px; color: #555; }
-.personal-site .experience-link { display: inline-block; margin-left: 60px; font-size: 14px; }
-.personal-site .toolkit { padding: 28px; background: #f4f6fa; border-top: 3px solid #1647bb; }
+.personal-site .experience-link { display: inline-block; margin-left: 32px; font-size: 14px; }
+.personal-site .toolkit { padding-left: 28px; border-left: 1px solid #ccc; }
 .personal-site .toolkit h3 { margin: 0; font-size: 26px; letter-spacing: -.025em; }
 .personal-site .toolkit-intro { font-size: 15px; color: #555; margin: 12px 0 24px; }
 .personal-site .tool-group + .tool-group { margin-top: 24px; }
-.personal-site .tool-group h4 { font-size: 13px; font-weight: 600; margin: 0 0 10px; }
-.personal-site .tool-group ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
-.personal-site .tool-group li { margin: 0; padding: 4px 9px; border: 1px solid #d7dce5; background: #fff; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.personal-site .tool-group h4 { font-size: 15px; font-weight: 600; margin: 0 0 6px; }
+.personal-site .tool-group ul { list-style: none; padding: 0; margin: 0; font-size: 15px; }
+.personal-site .tool-group li { display: inline; margin: 0; }
+.personal-site .tool-group li:not(:last-child)::after { content: ", "; }
 .personal-site .beyond-code { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; margin-top: 32px; padding-top: 28px; border-top: 1px solid #ddd; }
 .personal-site .beyond-code h3 { margin: 0 0 12px; font-size: 22px; }
 .personal-site .beyond-code p { font-size: 15px; }
-.personal-site .away-from-keyboard { border-left: 3px solid #1647bb; padding-left: 24px; align-self: start; }
+.personal-site .away-from-keyboard { border-left: 1px solid #ccc; padding-left: 28px; align-self: start; }
 .personal-site .away-from-keyboard .section-label { font-size: 12px; margin: 0 0 10px; }
 .personal-site .away-from-keyboard > p:last-child { margin: 0; font-size: 19px; line-height: 1.5; }
 .personal-site select,
@@ -143,10 +142,10 @@ html{
   .personal-site .project-filter label { display: block; margin-bottom: 6px; }
   .personal-site .experience-layout,
   .personal-site .beyond-code { grid-template-columns: 1fr; gap: 28px; }
-  .personal-site .current-role { padding: 24px; }
-  .personal-site .toolkit { padding: 24px; }
-  .personal-site .experience-timeline { margin-left: 24px; padding-left: 23px; }
+  .personal-site .toolkit { padding: 24px 0 0; border-left: 0; border-top: 1px solid #ccc; }
+  .personal-site .experience-timeline { padding-left: 23px; }
   .personal-site .experience-timeline li::before { left: -28px; }
-  .personal-site .experience-link { margin-left: 48px; }
+  .personal-site .experience-link { margin-left: 28px; }
+  .personal-site .away-from-keyboard { padding-left: 0; border-left: 0; }
   .personal-site hr { margin: 28px 0; }
 }
