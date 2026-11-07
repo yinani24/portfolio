@@ -9,8 +9,8 @@ export type HomepageProject = {
   credit?: { label: string; url: string };
 };
 
-// Earlier work is grouped by its original portfolio history, not an assumed
-// absence of AI assistance. Explicit credits support the AI-assisted entries.
+// Yash confirmed the original nine projects were built without AI coding
+// assistance. Synthia used GPT in the product, rather than to write its code.
 export const homepageProjects: HomepageProject[] = [
   {
     title: "Finance Tracker",
@@ -46,7 +46,9 @@ export const homepageProjects: HomepageProject[] = [
   },
   ...projects.map(({ title, description, link, tags }): HomepageProject => ({
     title,
-    description,
+    description: title === "Synthia AI"
+      ? "A practice-interview app with GPT-powered feedback. Built without AI coding assistance; GPT was part of the product itself."
+      : description,
     link: title === "Text Editor" ? "https://github.com/yinani24/text_editor" : link,
     tags: tags.filter((tag) => tag !== "All"),
     era: "earlier",

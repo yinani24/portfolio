@@ -33,7 +33,7 @@ export default function HomePage() {
       <hr />
       <section id="projects" aria-labelledby="projects-heading">
         <h2 id="projects-heading">Things I&apos;ve worked on</h2>
-        <p>Two chapters of building: my earlier projects and newer work with AI coding tools. This is about how I build, rather than whether the finished project uses AI.</p>
+        <p>Two chapters of building: before and after AI became part of my coding process. “Pre-AI” and “post-AI” describe how I wrote the code, not whether the project itself uses AI.</p>
         <ProjectDirectory projects={homepageProjects} featuredTitles={featuredTitles} />
         <p><a href="https://github.com/yinani24?tab=repositories">More code on GitHub →</a></p>
       </section>
@@ -65,11 +65,18 @@ export default function HomePage() {
       </section>
       <hr />
       <section id="judging" aria-labelledby="judging-heading">
-        <h2 id="judging-heading">Judging &amp; community</h2>
-        <p>I&apos;ve served as a judge at several events, alongside building projects of my own.</p>
+        <h2 id="judging-heading">Judging, mentoring &amp; community</h2>
+        <p>I also review other people&apos;s work, from hackathon demos to AI safety research.</p>
+        <h3>Events I&apos;ve judged</h3>
+        <ul>
+          <li><a href="https://www.calhacks.io/">Cal Hacks 13.0</a> — judge, October 23–25, 2026, San Francisco.</li>
+          <li><a href="https://ucsc-ai-hackathon.devpost.com/">UCSC AI Hackathon (Hack.dev)</a> — Round 1 judge, October 11, 2026.</li>
+          <li><a href="https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25">AI Collusion Research Sprint</a>, Apart Research — reviewed eight research projects following the October 23–25, 2026 sprint.</li>
+        </ul>
+        <h3>Other roles</h3>
         <ul>
           <li><a href="https://munichtechexpo.com/hackathons">MunichTech EXPO hackathons</a> — listed as a judge representing Velanir AI.</li>
-          <li><a href="https://luma.com/xdzhu4tn">DNAForge &amp; MTC Berkeley: AI × Biology Hackathon</a> — on the judges and mentors roster for November 14, 2026 (upcoming).</li>
+          <li><a href="https://luma.com/xdzhu4tn">DNAForge &amp; MTC Berkeley: AI × Biology Hackathon</a> — lunch mentor, helping teams think through model evaluation. November 14, 2026, Berkeley (upcoming).</li>
         </ul>
         <p>At UC Davis, I also helped organize technical workshops and events through Google Developer Student Club and supported outreach at SacHacks.</p>
       </section>

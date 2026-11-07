@@ -38,13 +38,13 @@ export default function ProjectDirectory({ projects, featuredTitles }: { project
       </div>
       <p className="project-count" role="status">{filtered.length} {filtered.length === 1 ? "project" : "projects"}{tag !== "All" ? ` using ${tag}` : " across two chapters"}.</p>
       <section aria-labelledby="ai-projects-heading">
-        <h3 id="ai-projects-heading">Built with AI · 2026</h3>
+        <h3 id="ai-projects-heading">Post-AI: built with coding assistants · 2026</h3>
         <p>Newer work with AI coding tools as part of the process. Each entry links to its development credit.</p>
         {assisted.length ? <ProjectList projects={assisted} /> : <p>No projects in this chapter use {tag}.</p>}
       </section>
       <section aria-labelledby="earlier-projects-heading">
-        <h3 id="earlier-projects-heading">Earlier projects · 2022–2024</h3>
-        <p>The original collection: systems programming, web apps, and machine learning. Dates describe the work’s era; they don’t establish whether AI coding tools were used.</p>
+        <h3 id="earlier-projects-heading">Pre-AI: built without coding assistants · 2022–2024</h3>
+        <p>My original projects, written without ChatGPT, Claude Code, or other AI coding assistance. Some explore AI as a subject; the code was my own.</p>
         {tag === "All" ? (
           <>
             <ProjectList projects={featured} />
