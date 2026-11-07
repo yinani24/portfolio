@@ -1,6 +1,8 @@
 import { homepageProjects } from "@/components/homepage-projects";
 import ProjectDirectory from "@/components/project-directory";
 import PlainContactForm from "@/components/plain-contact-form";
+import Image from "next/image";
+import headshot from "../../public/yash-inani-headshot.jpg";
 
 const featuredTitles = ["Synthia AI", "Simulation: Crypto Currency", "Shell", "Butterfly or Moth CNN"];
 
@@ -25,10 +27,13 @@ export default function HomePage() {
         </nav>
       </header>
       <hr />
-      <section id="about" aria-labelledby="about-heading">
+      <section id="about" className="personal-intro" aria-labelledby="about-heading">
+        <div>
         <h2 id="about-heading">Hello, I&apos;m Yash.</h2>
         <p>I build software, work with AI, and enjoy figuring out how things work. I&apos;m a founding AI engineer at Velanir.</p>
         <p>I studied Computer Science at UC Davis and grew up in Dubai. This is my little corner of the web.</p>
+        </div>
+        <Image className="personal-portrait" src={headshot} alt="Yash Inani" width={168} height={168} sizes="(max-width: 520px) 140px, 168px" priority />
       </section>
       <hr />
       <section id="projects" aria-labelledby="projects-heading">

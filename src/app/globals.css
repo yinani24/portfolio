@@ -34,6 +34,8 @@ html{
 .personal-site h2 { margin: 0 0 10px; font-size: 24px; font-weight: bold; line-height: 1.3; }
 .personal-site h3 { margin: 24px 0 10px; font-size: 20px; font-weight: bold; line-height: 1.3; }
 .personal-site p { margin: 10px 0; }
+.personal-site .personal-intro { display: grid; grid-template-columns: minmax(0, 1fr) 168px; align-items: start; gap: 24px; }
+.personal-site .personal-portrait { display: block; width: 168px; height: auto; border: 1px solid #a0a0a0; padding: 3px; }
 .personal-site a { color: #0000ee; text-decoration: underline; text-underline-offset: 2px; }
 .personal-site a:visited { color: #551a8b; }
 .personal-site a:hover { text-decoration-thickness: 2px; }
@@ -69,4 +71,8 @@ html{
   .personal-site { padding: 24px 20px; }
   .personal-site h1 { font-size: 30px; }
   .personal-site .project-filter label { display: block; margin-bottom: 6px; }
+}
+@media (max-width: 520px) {
+  .personal-site .personal-intro { grid-template-columns: 1fr; gap: 12px; }
+  .personal-site .personal-portrait { grid-row: 1; width: 140px; }
 }
